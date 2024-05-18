@@ -80,7 +80,7 @@ export function PaddedFullStack({
           width: "100%",
           flex: 1,
           flexDirection: "column",
-          paddingTop: 40,
+          paddingTop: 44,
         },
         style,
       ]}

@@ -56,6 +56,16 @@ export function Box({
   return <View style={style}>{children}</View>;
 }
 
+export function Flex({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
+  return <View style={[{ display: "flex" }, style]}>{children}</View>;
+}
+
 export function PaddedFullStack({
   children,
   style,
@@ -70,6 +80,30 @@ export function PaddedFullStack({
           flex: 1,
           flexDirection: "column",
           paddingTop: 40,
+        },
+        style,
+      ]}
+    >
+      {children}
+    </SafeAreaView>
+  );
+}
+
+export function WrapFullWidth({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
+  return (
+    <SafeAreaView
+      style={[
+        {
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          width: "100%",
         },
         style,
       ]}

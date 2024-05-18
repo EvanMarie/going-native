@@ -1,17 +1,19 @@
 import { col } from "@/constants/Colors_Styles";
 import { boxShadows } from "@/constants/shadows";
-import { StyleSheet, View } from "react-native";
+import { StyleProp, StyleSheet, View, ViewStyle } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 export function GradientBackground({
   colors,
   children,
+  style,
 }: {
   colors: string[];
   children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
 }) {
   return (
-    <LinearGradient colors={colors} style={styles.gradient}>
+    <LinearGradient colors={colors} style={[styles.gradient, style]}>
       <View style={styles.inner}>{children}</View>
     </LinearGradient>
   );
@@ -30,81 +32,141 @@ const styles = StyleSheet.create({
   },
 });
 
-export function GradientOne({ children }: { children?: React.ReactNode }) {
+export function GradientOne({
+  children,
+  style,
+}: {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   return (
-    <GradientBackground colors={[col[100], col[200]]}>
+    <GradientBackground colors={[col[100], col[200]]} style={style}>
       {children}
     </GradientBackground>
   );
 }
 
-export function GradientTwo({ children }: { children?: React.ReactNode }) {
+export function GradientTwo({
+  children,
+  style,
+}: {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   return (
-    <GradientBackground colors={[col[200], col[300]]}>
+    <GradientBackground colors={[col[200], col[300]]} style={style}>
       {children}
     </GradientBackground>
   );
 }
 
-export function GradientThree({ children }: { children?: React.ReactNode }) {
+export function GradientThree({
+  children,
+  style,
+}: {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   return (
-    <GradientBackground colors={[col[300], col[400]]}>
+    <GradientBackground colors={[col[300], col[400]]} style={style}>
       {children}
     </GradientBackground>
   );
 }
 
-export function GradientFour({ children }: { children?: React.ReactNode }) {
+export function GradientFour({
+  children,
+  style,
+}: {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   return (
-    <GradientBackground colors={[col[400], col[500]]}>
+    <GradientBackground colors={[col[400], col[500]]} style={style}>
       {children}
     </GradientBackground>
   );
 }
 
-export function GradientFive({ children }: { children?: React.ReactNode }) {
+export function GradientFive({
+  children,
+  style,
+}: {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   return (
-    <GradientBackground colors={[col[500], col[600]]}>
+    <GradientBackground colors={[col[500], col[600]]} style={style}>
       {children}
     </GradientBackground>
   );
 }
 
-export function GradientSix({ children }: { children?: React.ReactNode }) {
+export function GradientSix({
+  children,
+  style,
+}: {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   return (
-    <GradientBackground colors={[col[600], col[700]]}>
+    <GradientBackground colors={[col[600], col[700]]} style={style}>
       {children}
     </GradientBackground>
   );
 }
 
-export function GradientSeven({ children }: { children?: React.ReactNode }) {
+export function GradientSeven({
+  children,
+  style,
+}: {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   return (
-    <GradientBackground colors={[col[700], col[800]]}>
+    <GradientBackground colors={[col[700], col[800]]} style={style}>
       {children}
     </GradientBackground>
   );
 }
 
-export function GradientEight({ children }: { children?: React.ReactNode }) {
+export function GradientEight({
+  children,
+  style,
+}: {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   return (
-    <GradientBackground colors={[col[800], col[900]]}>
+    <GradientBackground colors={[col[800], col[900]]} style={style}>
       {children}
     </GradientBackground>
   );
 }
 
-export function GradientNine({ children }: { children?: React.ReactNode }) {
+export function GradientNine({
+  children,
+  style,
+}: {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   return (
-    <GradientBackground colors={[col[900], col[100]]}>
+    <GradientBackground colors={[col[900], col[100]]} style={style}>
       {children}
     </GradientBackground>
   );
 }
 
-export function GradientTen({ children }: { children?: React.ReactNode }) {
+export function GradientTen({
+  children,
+  style,
+}: {
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   return (
-    <GradientBackground colors={[col[100], col[300]]}>
+    <GradientBackground colors={[col[100], col[300]]} style={style}>
       {children}
     </GradientBackground>
   );

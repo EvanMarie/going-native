@@ -58,6 +58,64 @@ export default function DesignScreen() {
     { style: fontStyles.black, label: "fontStyles.black" },
   ];
 
+  const boxShadowList = [
+    { style: boxShadows.xs, label: "boxShadows.xs" },
+    { style: boxShadows.sm, label: "boxShadows.sm" },
+    { style: boxShadows.md, label: "boxShadows.md" },
+    { style: boxShadows.lg, label: "boxShadows.lg" },
+    { style: boxShadows.xl, label: "boxShadows.xl" },
+    { style: boxShadows.insetXs, label: "boxShadows.insetXs" },
+    { style: boxShadows.insetSm, label: "boxShadows.insetSm" },
+    { style: boxShadows.insetMd, label: "boxShadows.insetMd" },
+    { style: boxShadows.insetLg, label: "boxShadows.insetLg" },
+    { style: boxShadows.insetXl, label: "boxShadows.insetXl" },
+    { style: boxShadows.glowXs100, label: "boxShadows.glowXs100" },
+    { style: boxShadows.glowSm100, label: "boxShadows.glowSm100" },
+    { style: boxShadows.glowMd100, label: "boxShadows.glowMd100" },
+    { style: boxShadows.glowLg100, label: "boxShadows.glowLg100" },
+    { style: boxShadows.glowXl100, label: "boxShadows.glowXl100" },
+    { style: boxShadows.glowXs200, label: "boxShadows.glowXs200" },
+    { style: boxShadows.glowSm200, label: "boxShadows.glowSm200" },
+    { style: boxShadows.glowMd200, label: "boxShadows.glowMd200" },
+    { style: boxShadows.glowLg200, label: "boxShadows.glowLg200" },
+    { style: boxShadows.glowXl200, label: "boxShadows.glowXl200" },
+    { style: boxShadows.glowXs300, label: "boxShadows.glowXs300" },
+    { style: boxShadows.glowSm300, label: "boxShadows.glowSm300" },
+    { style: boxShadows.glowMd300, label: "boxShadows.glowMd300" },
+    { style: boxShadows.glowLg300, label: "boxShadows.glowLg300" },
+    { style: boxShadows.glowXl300, label: "boxShadows.glowXl300" },
+    { style: boxShadows.glowXs400, label: "boxShadows.glowXs400" },
+    { style: boxShadows.glowSm400, label: "boxShadows.glowSm400" },
+    { style: boxShadows.glowMd400, label: "boxShadows.glowMd400" },
+    { style: boxShadows.glowLg400, label: "boxShadows.glowLg400" },
+    { style: boxShadows.glowXl400, label: "boxShadows.glowXl400" },
+    { style: boxShadows.glowXs500, label: "boxShadows.glowXs500" },
+    { style: boxShadows.glowSm500, label: "boxShadows.glowSm500" },
+    { style: boxShadows.glowMd500, label: "boxShadows.glowMd500" },
+    { style: boxShadows.glowLg500, label: "boxShadows.glowLg500" },
+    { style: boxShadows.glowXl500, label: "boxShadows.glowXl500" },
+    { style: boxShadows.glowXs600, label: "boxShadows.glowXs600" },
+    { style: boxShadows.glowSm600, label: "boxShadows.glowSm600" },
+    { style: boxShadows.glowMd600, label: "boxShadows.glowMd600" },
+    { style: boxShadows.glowLg600, label: "boxShadows.glowLg600" },
+    { style: boxShadows.glowXl600, label: "boxShadows.glowXl600" },
+    { style: boxShadows.glowXs700, label: "boxShadows.glowXs700" },
+    { style: boxShadows.glowSm700, label: "boxShadows.glowSm700" },
+    { style: boxShadows.glowMd700, label: "boxShadows.glowMd700" },
+    { style: boxShadows.glowLg700, label: "boxShadows.glowLg700" },
+    { style: boxShadows.glowXl700, label: "boxShadows.glowXl700" },
+    { style: boxShadows.glowXs800, label: "boxShadows.glowXs800" },
+    { style: boxShadows.glowSm800, label: "boxShadows.glowSm800" },
+    { style: boxShadows.glowMd800, label: "boxShadows.glowMd800" },
+    { style: boxShadows.glowLg800, label: "boxShadows.glowLg800" },
+    { style: boxShadows.glowXl800, label: "boxShadows.glowXl800" },
+    { style: boxShadows.glowXs900, label: "boxShadows.glowXs900" },
+    { style: boxShadows.glowSm900, label: "boxShadows.glowSm900" },
+    { style: boxShadows.glowMd900, label: "boxShadows.glowMd900" },
+    { style: boxShadows.glowLg900, label: "boxShadows.glowLg900" },
+    { style: boxShadows.glowXl900, label: "boxShadows.glowXl900" },
+  ];
+
   const textShadowList = [
     {
       style: textShadows.rightSm,
@@ -171,19 +229,25 @@ export default function DesignScreen() {
 
   function HeaderSection({ title }: { title: string }) {
     return (
-      <CenterHorizontalFull
-        style={{ backgroundColor: col[600], paddingVertical: 10 }}
-      >
-        <TextLg
-          style={[
-            fontStyles.semiBold,
-            textShadows.left2xl,
-            { color: col[100], textAlign: "center" },
-          ]}
+      <Flex style={[boxShadows.glowXs200, { padding: 5 }]}>
+        <Flex
+          style={{
+            backgroundColor: col[800],
+            padding: 10,
+            borderRadius: 10,
+          }}
         >
-          {title}
-        </TextLg>
-      </CenterHorizontalFull>
+          <TextLg
+            style={[
+              fontStyles.semiBold,
+              textShadows.left2xl,
+              { color: col[200], textAlign: "center" },
+            ]}
+          >
+            {title}
+          </TextLg>
+        </Flex>
+      </Flex>
     );
   }
 
@@ -201,20 +265,50 @@ export default function DesignScreen() {
     textShadow?: any;
   }) {
     return (
-      <Flex
-        style={[
-          {
-            paddingHorizontal: 15,
-            paddingVertical: 7,
-            backgroundColor: backgroundColor,
-            borderRadius: 10,
-          },
-          boxShadows["md"],
-        ]}
-      >
-        <TextMd style={[{ color: textColor }, style, textShadow]}>
-          {label}
-        </TextMd>
+      <Flex style={[boxShadows.glowMd900, { padding: 5 }]}>
+        <Flex
+          style={[
+            {
+              paddingHorizontal: 12,
+              paddingVertical: 6,
+              backgroundColor: backgroundColor,
+              borderRadius: 10,
+            },
+          ]}
+        >
+          <TextSm style={[{ color: textColor }, style, textShadow]}>
+            {label}
+          </TextSm>
+        </Flex>
+      </Flex>
+    );
+  }
+
+  function BoxShadowContainer({
+    shadow,
+    label,
+    textColor = col[100],
+    backgroundColor = col[500],
+  }: {
+    shadow: any;
+    label: string;
+    textColor?: string;
+    backgroundColor?: string;
+  }) {
+    return (
+      <Flex style={[shadow, { padding: 5 }]}>
+        <Flex
+          style={[
+            {
+              paddingHorizontal: 8,
+              paddingVertical: 5,
+              backgroundColor: backgroundColor,
+              borderRadius: 10,
+            },
+          ]}
+        >
+          <TextXs style={[{ color: textColor }]}>{label}</TextXs>
+        </Flex>
       </Flex>
     );
   }
@@ -318,6 +412,27 @@ export default function DesignScreen() {
                   textShadow={textShadow.style}
                   textColor={textShadow.textColor}
                   backgroundColor={textShadow.backgroundColor}
+                />
+              ))}
+            </WrapFullWidth>
+          </VStackFullWidth>
+          {/* ------------------------ FONT WEIGHTS ------------------------ */}
+          <VStackFullWidth
+            style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
+          >
+            <HeaderSection title="Box Shadows & Glows" />
+            <WrapFullWidth
+              style={{
+                gap: 10,
+                borderRadius: 10,
+                justifyContent: "space-evenly",
+              }}
+            >
+              {boxShadowList.map((boxShadow, index) => (
+                <BoxShadowContainer
+                  key={index}
+                  shadow={boxShadow.style}
+                  label={boxShadow.label}
                 />
               ))}
             </WrapFullWidth>

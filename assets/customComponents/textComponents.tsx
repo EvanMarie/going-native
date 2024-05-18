@@ -7,7 +7,7 @@ const systemFont = Platform.select({
   android: "Roboto", // 'Roboto' on Android
 });
 
-export const headingColor = col[300];
+export const headingColor = col[200];
 export const defaultTextColor = col[100];
 
 export const fontStyles = StyleSheet.create({

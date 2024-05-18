@@ -1,7 +1,7 @@
 import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { CenterSafeFull } from "../../assets/customComponents/containers";
-import { col } from "@/constants/Colors";
+import { col } from "@/constants/Colors_Styles";
 
 export default function TabTwo() {
   return (

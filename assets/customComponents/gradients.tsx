@@ -1,5 +1,5 @@
-import { col } from "@/constants/Colors";
-import { shadows } from "@/constants/boxShadows";
+import { col } from "@/constants/Colors_Styles";
+import { boxShadows } from "@/constants/shadows";
 import { StyleSheet, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 

@@ -14,8 +14,9 @@ import {
   GradientNine,
   GradientTen,
 } from "../gradients";
-import { col } from "@/constants/Colors";
-import { shadows } from "@/constants/boxShadows";
+import { col } from "@/constants/Colors_Styles";
+import { boxShadows, textShadows } from "@/constants/shadows";
+import { TextLg } from "../textComponents";
 
 export function GradientBox({
   label,
@@ -27,9 +28,11 @@ export function GradientBox({
   textColor?: string;
 }) {
   return (
-    <Flex style={[styles.box, shadows["xl"]]}>
+    <Flex style={[styles.box, boxShadows["xl"]]}>
       <Gradient>
-        <Text style={{ color: textColor }}>{label}</Text>
+        <TextLg style={[{ color: textColor }, textShadows.glowXl]}>
+          {label}
+        </TextLg>
       </Gradient>
     </Flex>
   );

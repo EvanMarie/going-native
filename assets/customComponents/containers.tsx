@@ -77,6 +77,7 @@ export function PaddedFullStack({
     <SafeAreaView
       style={[
         {
+          width: "100%",
           flex: 1,
           flexDirection: "column",
           paddingTop: 40,
@@ -103,6 +104,29 @@ export function WrapFullWidth({
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
+          width: "100%",
+        },
+        style,
+      ]}
+    >
+      {children}
+    </SafeAreaView>
+  );
+}
+
+export function VStackFullWidth({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
+  return (
+    <SafeAreaView
+      style={[
+        {
+          display: "flex",
+          flexDirection: "column",
           width: "100%",
         },
         style,

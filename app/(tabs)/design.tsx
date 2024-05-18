@@ -8,6 +8,15 @@ import {
 import { GradientOne } from "../../assets/customComponents/gradients";
 import GradientExamples from "../../assets/customComponents/designExamples/gradientExamples";
 import {
+  Heading10xl,
+  Heading2xl,
+  Heading3xl,
+  Heading4xl,
+  Heading5xl,
+  Heading6xl,
+  Heading7xl,
+  Heading8xl,
+  Heading9xl,
   HeadingLg,
   HeadingMd,
   HeadingSm,
@@ -27,22 +36,23 @@ import {
   TextSm,
   TextXl,
   TextXs,
+  fontStyles,
 } from "../../assets/customComponents/textComponents";
+import { col } from "@/constants/Colors_Styles";
+import { boxShadows, textShadows } from "@/constants/shadows";
 
 export default function DesignScreen() {
   const fontWeights = [
-    "light",
-    "",
-    "lightItalic",
-    "thin",
-    "thinItalic",
-    "regular",
-    "italic",
-    "bold",
-    "boldItalic",
-    "dark",
-    "darkItalic",
+    { style: fontStyles.regular, label: "fontStyles.regular" },
+    { style: fontStyles.bold, label: "fontStyles.bold" },
+    { style: fontStyles.italic, label: "fontStyles.italic" },
+    { style: fontStyles.light, label: "fontStyles.light" },
+    { style: fontStyles.thin, label: "fontStyles.thin" },
+    { style: fontStyles.medium, label: "fontStyles.medium" },
+    { style: fontStyles.semiBold, label: "fontStyles.semiBold" },
+    { style: fontStyles.black, label: "fontStyles.black" },
   ];
+
   return (
     <GradientOne>
       <PaddedFullStack>
@@ -93,6 +103,15 @@ export default function DesignScreen() {
               <HeadingMd>HeadingMd</HeadingMd>
               <HeadingLg>HeadingLg</HeadingLg>
               <HeadingXl>HeadingXl</HeadingXl>
+              <Heading2xl>Heading2xl</Heading2xl>
+              <Heading3xl>Heading3xl</Heading3xl>
+              <Heading4xl>Heading4xl</Heading4xl>
+              <Heading5xl>Heading5xl</Heading5xl>
+              <Heading6xl>Heading6xl</Heading6xl>
+              <Heading7xl>Heading7xl</Heading7xl>
+              <Heading8xl>Heading8xl</Heading8xl>
+              <Heading9xl>Heading9xl</Heading9xl>
+              <Heading10xl>Heading10xl</Heading10xl>
             </WrapFullWidth>
           </VStackFullWidth>
           {/* ------------------------ FONT WEIGHTS ------------------------ */}
@@ -100,10 +119,35 @@ export default function DesignScreen() {
             style={{ alignItems: "center", gap: 10, paddingVertical: 10 }}
           >
             <HeadingLg>Font Weights & Styles</HeadingLg>
-            <WrapFullWidth>
-              {fontWeights.map((weight) => (
-                <Flex style={{ padding: 10 }} key={weight}>
-                  <TextXl style={{ fontFamily: weight }}>{weight}</TextXl>
+            <WrapFullWidth
+              style={{
+                gap: 10,
+                borderRadius: 10,
+                justifyContent: "space-evenly",
+              }}
+            >
+              {fontWeights.map((fontStyle, index) => (
+                <Flex
+                  key={index}
+                  style={[
+                    {
+                      paddingHorizontal: 15,
+                      paddingVertical: 7,
+                      backgroundColor: col[600],
+                      borderRadius: 10,
+                    },
+                    boxShadows["md"],
+                  ]}
+                >
+                  <TextMd
+                    style={[
+                      { color: col[100] },
+                      fontStyle.style,
+                      textShadows.leftMd,
+                    ]}
+                  >
+                    {fontStyle.label}
+                  </TextMd>
                 </Flex>
               ))}
             </WrapFullWidth>

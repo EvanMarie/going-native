@@ -1,5 +1,52 @@
-import { headingColor, headingWeight } from "@/constants/Colors_Styles";
-import { StyleProp, Text, TextStyle } from "react-native";
+import React from "react";
+import { col } from "@/constants/Colors_Styles";
+import { StyleProp, Text, TextStyle, StyleSheet, Platform } from "react-native";
+
+const systemFont = Platform.select({
+  ios: "System", // 'San Francisco' on iOS
+  android: "Roboto", // 'Roboto' on Android
+});
+
+export const fontStyles = StyleSheet.create({
+  regular: {
+    fontFamily: systemFont,
+    fontWeight: "normal",
+  },
+  bold: {
+    fontFamily: systemFont,
+    fontWeight: "bold",
+  },
+  italic: {
+    fontFamily: systemFont,
+    fontStyle: "italic",
+  },
+  light: {
+    fontFamily: systemFont,
+    fontWeight: "300",
+  },
+  thin: {
+    fontFamily: systemFont,
+    fontWeight: "100",
+  },
+  medium: {
+    fontFamily: systemFont,
+    fontWeight: "500",
+  },
+  semiBold: {
+    fontFamily: Platform.select({
+      ios: systemFont,
+      android: "Roboto-Medium",
+    }),
+    fontWeight: Platform.select({
+      ios: "500",
+      android: "500",
+    }),
+  },
+  black: {
+    fontFamily: systemFont,
+    fontWeight: "900",
+  },
+});
 
 export function TextXs({
   children,
@@ -28,7 +75,9 @@ export function TextMd({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 21 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 21, lineHeight: 25 }, style]}>{children}</Text>
+  );
 }
 
 export function TextLg({
@@ -141,6 +190,10 @@ export function Text10xl({
   return <Text style={[{ fontSize: 65 }, style]}>{children}</Text>;
 }
 
+// HEADINGS COMPONENTS AND STYLES
+
+const headingColor = col[700];
+
 export function HeadingXs({
   children,
   style,
@@ -151,7 +204,8 @@ export function HeadingXs({
   return (
     <Text
       style={[
-        { fontSize: 16, fontWeight: headingWeight, color: headingColor },
+        fontStyles.semiBold,
+        { fontSize: 16, color: headingColor },
         style,
       ]}
     >
@@ -169,10 +223,9 @@ export function HeadingSm({
 }) {
   return (
     <Text
-      style={[
-        { fontSize: 20, fontWeight: headingWeight, color: headingColor },
-        style,
-      ]}
+      style={
+        (fontStyles.semiBold, [{ fontSize: 20, color: headingColor }, style])
+      }
     >
       {children}
     </Text>
@@ -189,7 +242,8 @@ export function HeadingMd({
   return (
     <Text
       style={[
-        { fontSize: 24, fontWeight: headingWeight, color: headingColor },
+        fontStyles.semiBold,
+        { fontSize: 24, color: headingColor },
         style,
       ]}
     >
@@ -208,7 +262,8 @@ export function HeadingLg({
   return (
     <Text
       style={[
-        { fontSize: 28, fontWeight: headingWeight, color: headingColor },
+        fontStyles.semiBold,
+        { fontSize: 28, color: headingColor },
         style,
       ]}
     >
@@ -227,7 +282,8 @@ export function HeadingXl({
   return (
     <Text
       style={[
-        { fontSize: 32, fontWeight: headingWeight, color: headingColor },
+        fontStyles.semiBold,
+        { fontSize: 32, color: headingColor },
         style,
       ]}
     >
@@ -246,7 +302,8 @@ export function Heading2xl({
   return (
     <Text
       style={[
-        { fontSize: 36, fontWeight: headingWeight, color: headingColor },
+        fontStyles.semiBold,
+        { fontSize: 36, color: headingColor },
         style,
       ]}
     >
@@ -265,7 +322,148 @@ export function Heading3xl({
   return (
     <Text
       style={[
-        { fontSize: 40, fontWeight: headingWeight, color: headingColor },
+        fontStyles.semiBold,
+        { fontSize: 40, color: headingColor },
+        style,
+      ]}
+    >
+      {children}
+    </Text>
+  );
+}
+
+export function Heading4xl({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<TextStyle>;
+}) {
+  return (
+    <Text
+      style={[
+        fontStyles.semiBold,
+        { fontSize: 44, color: headingColor },
+        style,
+      ]}
+    >
+      {children}
+    </Text>
+  );
+}
+
+export function Heading5xl({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<TextStyle>;
+}) {
+  return (
+    <Text
+      style={[
+        fontStyles.semiBold,
+        { fontSize: 48, color: headingColor },
+        style,
+      ]}
+    >
+      {children}
+    </Text>
+  );
+}
+
+export function Heading6xl({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<TextStyle>;
+}) {
+  return (
+    <Text
+      style={[
+        fontStyles.semiBold,
+        { fontSize: 52, color: headingColor },
+        style,
+      ]}
+    >
+      {children}
+    </Text>
+  );
+}
+
+export function Heading7xl({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<TextStyle>;
+}) {
+  return (
+    <Text
+      style={[
+        fontStyles.semiBold,
+        { fontSize: 56, color: headingColor },
+        style,
+      ]}
+    >
+      {children}
+    </Text>
+  );
+}
+
+export function Heading8xl({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<TextStyle>;
+}) {
+  return (
+    <Text
+      style={[
+        fontStyles.semiBold,
+        { fontSize: 60, color: headingColor },
+        style,
+      ]}
+    >
+      {children}
+    </Text>
+  );
+}
+
+export function Heading9xl({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<TextStyle>;
+}) {
+  return (
+    <Text
+      style={[
+        fontStyles.semiBold,
+        { fontSize: 64, color: headingColor },
+        style,
+      ]}
+    >
+      {children}
+    </Text>
+  );
+}
+
+export function Heading10xl({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<TextStyle>;
+}) {
+  return (
+    <Text
+      style={[
+        fontStyles.semiBold,
+        { fontSize: 68, color: headingColor },
         style,
       ]}
     >

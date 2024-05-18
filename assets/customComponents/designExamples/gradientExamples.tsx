@@ -16,7 +16,7 @@ import {
 } from "../gradients";
 import { col } from "@/constants/Colors_Styles";
 import { boxShadows, textShadows } from "@/constants/shadows";
-import { TextLg } from "../textComponents";
+import { TextLg, TextMd } from "../textComponents";
 
 export function GradientBox({
   label,
@@ -28,11 +28,11 @@ export function GradientBox({
   textColor?: string;
 }) {
   return (
-    <Flex style={[styles.box, boxShadows["xl"]]}>
+    <Flex style={[{ borderRadius: 12 }, styles.box, boxShadows["xl"]]}>
       <Gradient>
-        <TextLg style={[{ color: textColor }, textShadows.glowXl]}>
+        <TextMd style={[{ color: textColor }, textShadows.glowXl]}>
           {label}
-        </TextLg>
+        </TextMd>
       </Gradient>
     </Flex>
   );
@@ -40,8 +40,8 @@ export function GradientBox({
 
 const styles = StyleSheet.create({
   box: {
-    width: 200,
-    height: 200,
+    width: 175,
+    height: 175,
     justifyContent: "center",
     alignItems: "center",
     flexShrink: 0,
@@ -76,7 +76,7 @@ const gradients = [
 
 export default function GradientExamples() {
   return (
-    <WrapFullWidth>
+    <WrapFullWidth style={{ justifyContent: "space-evenly", rowGap: 12 }}>
       {gradients.map((gradient, index) => (
         <GradientBox
           key={index}

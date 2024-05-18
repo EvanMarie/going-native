@@ -18,26 +18,24 @@ export const col = {
 };
 
 
-export const headingWeight = 600
-export const headingColor = col[700];
-const tintColorLight = col[400];
-const tintColorDark = col[600];
+const tintColorLight = col[700];
+const tintColorDark = col[200];
 
 export const Colors = {
   light: {
     text: col[900],
     background: col[200],
     tint: tintColorLight,
-    icon: col[600],
-    tabIconDefault: col[500],
+    icon: col[800],
+    tabIconDefault: col[800],
     tabIconSelected: tintColorLight,
   },
   dark: {
     text: col[100],
     background: col[800],
     tint: tintColorDark,
-    icon: col[800],
-    tabIconDefault: col[800],
+    icon: col[200],
+    tabIconDefault: col[200],
     tabIconSelected: tintColorDark,
   },
 };

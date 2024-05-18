@@ -55,3 +55,26 @@ export function Box({
 }) {
   return <View style={style}>{children}</View>;
 }
+
+export function PaddedFullStack({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
+  return (
+    <SafeAreaView
+      style={[
+        {
+          flex: 1,
+          flexDirection: "column",
+          paddingTop: 40,
+        },
+        style,
+      ]}
+    >
+      {children}
+    </SafeAreaView>
+  );
+}

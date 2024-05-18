@@ -4,6 +4,8 @@
  */
 
 export const col = {
+  light: "#ebffef",
+  dark: "#2e1e30",
   100: "#cbf5d4",
   200: "#40c5c7",
   300: "#5D8A66",
@@ -14,6 +16,18 @@ export const col = {
   800: "#1f1d40",
   900: "#210f24",
 };
+
+export const grads = {
+  light100: `linear-gradient(135deg, ${col[100]} 0%, ${col[200]} 100%)`,
+  light200: `linear-gradient(135deg, #5D8A66 0%, #1A6566 100%)`,
+  light300: `linear-gradient(135deg, #21445B 0%, #323050 100%)`,
+  light400: `linear-gradient(135deg, #45214A 0%, #1f1d40 100%)`,
+  dark100: `linear-gradient(135deg, #cbf5d4 0%, #40c5c7 100%)`,
+  dark200: `linear-gradient(135deg, #5D8A66 0%, #1A6566 100%)`,
+  dark300: `linear-gradient(135deg, #21445B 0%, #323050 100%)`,
+  dark400: `linear-gradient(135deg, #45214A 0%, #1f1d40 100%)`,
+};
+
 
 const tintColorLight = col[400];
 const tintColorDark = col[600];

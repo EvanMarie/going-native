@@ -55,15 +55,164 @@ export default function DesignScreen() {
     { style: fontStyles.black, label: "fontStyles.black" },
   ];
 
+  const textShadowList = [
+    {
+      style: textShadows.rightSm,
+      label: "textShadows.rightSm",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.rightMd,
+      label: "textShadows.rightMd",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.rightLg,
+      label: "textShadows.rightLg",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.rightXl,
+      label: "textShadows.rightXl",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.right2xl,
+      label: "textShadows.right2xl",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.right3xl,
+      label: "textShadows.right3xl",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.leftSm,
+      label: "textShadows.leftSm",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.leftMd,
+      label: "textShadows.leftMd",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.leftLg,
+      label: "textShadows.leftLg",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.leftXl,
+      label: "textShadows.leftXl",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.left2xl,
+      label: "textShadows.left2xl",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.left3xl,
+      label: "textShadows.left3xl",
+      textColor: col[100],
+      backgroundColor: col[200],
+    },
+    {
+      style: textShadows.glowSm,
+      label: "textShadows.glowSm",
+      textColor: col[900],
+      backgroundColor: col[900],
+    },
+    {
+      style: textShadows.glowMd,
+      label: "textShadows.glowMd",
+      textColor: col[900],
+      backgroundColor: col[900],
+    },
+    {
+      style: textShadows.glowLg,
+      label: "textShadows.glowLg",
+      textColor: col[900],
+      backgroundColor: col[900],
+    },
+    {
+      style: textShadows.glowXl,
+      label: "textShadows.glowXl",
+      textColor: col[900],
+      backgroundColor: col[900],
+    },
+    {
+      style: textShadows.glow2xl,
+      label: "textShadows.glow2xl",
+      textColor: col[900],
+      backgroundColor: col[900],
+    },
+    {
+      style: textShadows.glow3xl,
+      label: "textShadows.glow3xl",
+      textColor: col[900],
+      backgroundColor: col[900],
+    },
+  ];
+
   function HeaderSection({ title }: { title: string }) {
     return (
       <CenterHorizontalFull
-        style={{ backgroundColor: col[800], paddingVertical: 10 }}
+        style={{ backgroundColor: col[600], paddingVertical: 10 }}
       >
-        <TextLg style={{ color: col[100], textAlign: "center" }}>
+        <TextLg
+          style={[
+            fontStyles.semiBold,
+            textShadows.left2xl,
+            { color: col[100], textAlign: "center" },
+          ]}
+        >
           {title}
         </TextLg>
       </CenterHorizontalFull>
+    );
+  }
+
+  function TextExampleContainer({
+    style,
+    label,
+    textColor = col[100],
+    backgroundColor = col[600],
+    textShadow = textShadows.leftMd,
+  }: {
+    style: any;
+    label: string;
+    textColor?: string;
+    backgroundColor?: string;
+    textShadow?: any;
+  }) {
+    return (
+      <Flex
+        style={[
+          {
+            paddingHorizontal: 15,
+            paddingVertical: 7,
+            backgroundColor: backgroundColor,
+            borderRadius: 10,
+          },
+          boxShadows["md"],
+        ]}
+      >
+        <TextMd style={[{ color: textColor }, style, textShadow]}>
+          {label}
+        </TextMd>
+      </Flex>
     );
   }
 
@@ -144,28 +293,29 @@ export default function DesignScreen() {
               }}
             >
               {fontWeights.map((fontStyle, index) => (
-                <Flex
+                <TextExampleContainer
                   key={index}
-                  style={[
-                    {
-                      paddingHorizontal: 15,
-                      paddingVertical: 7,
-                      backgroundColor: col[600],
-                      borderRadius: 10,
-                    },
-                    boxShadows["md"],
-                  ]}
-                >
-                  <TextMd
-                    style={[
-                      { color: col[100] },
-                      fontStyle.style,
-                      textShadows.leftMd,
-                    ]}
-                  >
-                    {fontStyle.label}
-                  </TextMd>
-                </Flex>
+                  style={fontStyle.style}
+                  label={fontStyle.label}
+                />
+              ))}
+            </WrapFullWidth>
+            <WrapFullWidth
+              style={{
+                gap: 10,
+                borderRadius: 10,
+                justifyContent: "space-evenly",
+              }}
+            >
+              {textShadowList.map((textShadow, index) => (
+                <TextExampleContainer
+                  key={index}
+                  style={fontStyles.regular}
+                  label={textShadow.label}
+                  textShadow={textShadow.style}
+                  textColor={textShadow.textColor}
+                  backgroundColor={textShadow.backgroundColor}
+                />
               ))}
             </WrapFullWidth>
           </VStackFullWidth>

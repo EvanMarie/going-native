@@ -55,7 +55,11 @@ export function TextXs({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 13 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 13, lineHeight: 13, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function TextSm({
@@ -65,7 +69,11 @@ export function TextSm({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 17 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 17, lineHeight: 17, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function TextMd({
@@ -76,7 +84,9 @@ export function TextMd({
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 21, lineHeight: 25 }, style]}>{children}</Text>
+    <Text style={[{ fontSize: 21, lineHeight: 21, padding: 7 }, style]}>
+      {children}
+    </Text>
   );
 }
 
@@ -87,7 +97,11 @@ export function TextLg({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 25 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 25, lineHeight: 25, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function TextXl({
@@ -97,7 +111,11 @@ export function TextXl({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 29 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 29, lineHeight: 29, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function Text2xl({
@@ -107,7 +125,11 @@ export function Text2xl({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 33 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 33, lineHeight: 33, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function Text3xl({
@@ -117,7 +139,11 @@ export function Text3xl({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 37 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 37, lineHeight: 27, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function Text4xl({
@@ -127,7 +153,11 @@ export function Text4xl({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 41 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 41, lineHeight: 41, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function Text5xl({
@@ -137,7 +167,11 @@ export function Text5xl({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 45 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 45, lineHeight: 45, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function Text6xl({
@@ -147,7 +181,11 @@ export function Text6xl({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 49 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 49, lineHeight: 49, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function Text7xl({
@@ -157,7 +195,11 @@ export function Text7xl({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 53 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 53, lineHeight: 53, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function Text8xl({
@@ -167,7 +209,11 @@ export function Text8xl({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 57 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 57, lineHeight: 57, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function Text9xl({
@@ -177,7 +223,11 @@ export function Text9xl({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 61 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 61, lineHeight: 61, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 export function Text10xl({
@@ -187,7 +237,11 @@ export function Text10xl({
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
 }) {
-  return <Text style={[{ fontSize: 65 }, style]}>{children}</Text>;
+  return (
+    <Text style={[{ fontSize: 65, lineHeight: 65, padding: 7 }, style]}>
+      {children}
+    </Text>
+  );
 }
 
 // HEADINGS COMPONENTS AND STYLES
@@ -205,7 +259,7 @@ export function HeadingXs({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 16, color: headingColor },
+        { fontSize: 16, lineHeight: 16, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -224,7 +278,11 @@ export function HeadingSm({
   return (
     <Text
       style={
-        (fontStyles.semiBold, [{ fontSize: 20, color: headingColor }, style])
+        (fontStyles.semiBold,
+        [
+          { fontSize: 20, lineHeight: 20, padding: 7, color: headingColor },
+          style,
+        ])
       }
     >
       {children}
@@ -243,7 +301,7 @@ export function HeadingMd({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 24, color: headingColor },
+        { fontSize: 24, lineHeight: 24, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -263,7 +321,7 @@ export function HeadingLg({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 28, color: headingColor },
+        { fontSize: 28, lineHeight: 28, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -283,7 +341,7 @@ export function HeadingXl({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 32, color: headingColor },
+        { fontSize: 32, lineHeight: 32, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -303,7 +361,7 @@ export function Heading2xl({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 36, color: headingColor },
+        { fontSize: 36, lineHeight: 36, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -323,7 +381,7 @@ export function Heading3xl({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 40, color: headingColor },
+        { fontSize: 40, lineHeight: 40, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -343,7 +401,7 @@ export function Heading4xl({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 44, color: headingColor },
+        { fontSize: 44, lineHeight: 44, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -363,7 +421,7 @@ export function Heading5xl({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 48, color: headingColor },
+        { fontSize: 48, lineHeight: 48, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -383,7 +441,7 @@ export function Heading6xl({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 52, color: headingColor },
+        { fontSize: 52, lineHeight: 52, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -403,7 +461,7 @@ export function Heading7xl({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 56, color: headingColor },
+        { fontSize: 56, lineHeight: 56, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -423,7 +481,7 @@ export function Heading8xl({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 60, color: headingColor },
+        { fontSize: 60, lineHeight: 60, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -443,7 +501,7 @@ export function Heading9xl({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 64, color: headingColor },
+        { fontSize: 64, lineHeight: 64, padding: 7, color: headingColor },
         style,
       ]}
     >
@@ -463,7 +521,7 @@ export function Heading10xl({
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 68, color: headingColor },
+        { fontSize: 68, lineHeight: 68, padding: 7, color: headingColor },
         style,
       ]}
     >

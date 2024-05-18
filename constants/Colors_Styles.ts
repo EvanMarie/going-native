@@ -23,19 +23,19 @@ const tintColorDark = col[200];
 
 export const Colors = {
   light: {
-    text: col[900],
-    background: col[200],
-    tint: tintColorLight,
-    icon: col[800],
+    text: col[100],
+    background: col[800],
+    tint: tintColorDark,
+    icon: col[200],
     tabIconDefault: col[800],
-    tabIconSelected: tintColorLight,
+    tabIconSelected: tintColorDark,
   },
   dark: {
     text: col[100],
     background: col[800],
     tint: tintColorDark,
     icon: col[200],
-    tabIconDefault: col[200],
+    tabIconDefault: col[800],
     tabIconSelected: tintColorDark,
   },
 };

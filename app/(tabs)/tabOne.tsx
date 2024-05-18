@@ -5,12 +5,10 @@ import { ScrollView } from "react-native";
 
 export default function TabTwoScreen() {
   return (
-    <GradientOne>
-      <PaddedFullStack>
-        <ScrollView style={{ width: "100%", paddingHorizontal: 10 }}>
-          <ScrollViewExample />
-        </ScrollView>
-      </PaddedFullStack>
-    </GradientOne>
+    <PaddedFullStack>
+      <ScrollView style={{ width: "100%", paddingHorizontal: 10 }}>
+        <ScrollViewExample />
+      </ScrollView>
+    </PaddedFullStack>
   );
 }

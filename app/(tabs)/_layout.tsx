@@ -4,12 +4,12 @@ import React from "react";
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
 import { Colors } from "@/constants/Colors_Styles";
 import { useColorScheme } from "@/hooks/useColorScheme";
-import { Platform, StyleSheet } from "react-native";
+import { Platform, StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-  const insets = useSafeAreaInsets();
+
   return (
     <Tabs
       screenOptions={{
@@ -18,10 +18,15 @@ export default function TabLayout() {
         tabBarStyle: {
           ...Platform.select({
             ios: {
-              height: 40 + insets.bottom,
-              paddingBottom: insets.bottom,
+              height: 55,
+              paddingBottom: 5,
+              backgroundColor: Colors[colorScheme ?? "light"].background,
             },
-            android: styles.tabBarAndroid,
+            android: {
+              height: 50,
+              paddingBottom: 5,
+              backgroundColor: Colors[colorScheme ?? "light"].background,
+            },
           }),
         },
       }}
@@ -81,10 +86,10 @@ export default function TabLayout() {
 const styles = StyleSheet.create({
   tabBarIOS: {
     height: 55,
-    paddingBottom: 5,
+    paddingVertical: 10,
   },
   tabBarAndroid: {
     height: 55,
-    paddingBottom: 5,
+    paddingBottom: 10,
   },
 });

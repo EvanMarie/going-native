@@ -7,7 +7,10 @@ import {
   VStackFullWidth,
   WrapFullWidth,
 } from "../../assets/customComponents/containers";
-import { GradientOne } from "../../assets/customComponents/gradients";
+import {
+  GradientOne,
+  GradientSeven,
+} from "../../assets/customComponents/gradients";
 import GradientExamples from "../../assets/customComponents/designExamples/gradientExamples";
 import {
   Heading10xl,
@@ -217,7 +220,7 @@ export default function DesignScreen() {
   }
 
   return (
-    <GradientOne>
+    <GradientSeven>
       <PaddedFullStack>
         <ScrollView>
           {/* ------------------------ GRADIENTS ------------------------ */}
@@ -321,6 +324,6 @@ export default function DesignScreen() {
           </VStackFullWidth>
         </ScrollView>
       </PaddedFullStack>
-    </GradientOne>
+    </GradientSeven>
   );
 }

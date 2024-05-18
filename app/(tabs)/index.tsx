@@ -1,11 +1,14 @@
-import { GradientOne } from "../../assets/customComponents/gradients";
+import {
+  GradientOne,
+  GradientSeven,
+} from "../../assets/customComponents/gradients";
 
 import { Text3xl } from "../../assets/customComponents/textComponents";
 
 export default function HomeScreen() {
   return (
-    <GradientOne>
+    <GradientSeven>
       <Text3xl>Home</Text3xl>
-    </GradientOne>
+    </GradientSeven>
   );
 }

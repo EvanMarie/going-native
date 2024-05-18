@@ -7,6 +7,9 @@ const systemFont = Platform.select({
   android: "Roboto", // 'Roboto' on Android
 });
 
+export const headingColor = col[300];
+export const defaultTextColor = col[100];
+
 export const fontStyles = StyleSheet.create({
   regular: {
     fontFamily: systemFont,
@@ -50,13 +53,20 @@ export const fontStyles = StyleSheet.create({
 
 export function TextXs({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 13, lineHeight: 13, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 13, lineHeight: 13, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -64,13 +74,20 @@ export function TextXs({
 
 export function TextSm({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 17, lineHeight: 17, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 17, lineHeight: 17, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -78,13 +95,20 @@ export function TextSm({
 
 export function TextMd({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 21, lineHeight: 21, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 21, lineHeight: 21, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -92,13 +116,20 @@ export function TextMd({
 
 export function TextLg({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 25, lineHeight: 25, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 25, lineHeight: 25, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -106,13 +137,20 @@ export function TextLg({
 
 export function TextXl({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 29, lineHeight: 29, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 29, lineHeight: 29, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -120,13 +158,20 @@ export function TextXl({
 
 export function Text2xl({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 33, lineHeight: 33, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 33, lineHeight: 33, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -134,13 +179,20 @@ export function Text2xl({
 
 export function Text3xl({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 37, lineHeight: 27, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 37, lineHeight: 27, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -148,13 +200,20 @@ export function Text3xl({
 
 export function Text4xl({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 41, lineHeight: 41, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 41, lineHeight: 41, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -162,13 +221,20 @@ export function Text4xl({
 
 export function Text5xl({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 45, lineHeight: 45, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 45, lineHeight: 45, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -176,13 +242,20 @@ export function Text5xl({
 
 export function Text6xl({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 49, lineHeight: 49, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 49, lineHeight: 49, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -190,13 +263,20 @@ export function Text6xl({
 
 export function Text7xl({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 53, lineHeight: 53, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 53, lineHeight: 53, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -204,13 +284,20 @@ export function Text7xl({
 
 export function Text8xl({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 57, lineHeight: 57, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 57, lineHeight: 57, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -218,13 +305,20 @@ export function Text8xl({
 
 export function Text9xl({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 61, lineHeight: 61, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 61, lineHeight: 61, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
@@ -232,21 +326,26 @@ export function Text9xl({
 
 export function Text10xl({
   children,
+  textColor = defaultTextColor,
   style,
 }: {
   children: React.ReactNode;
+  textColor?: string;
   style?: StyleProp<TextStyle>;
 }) {
   return (
-    <Text style={[{ fontSize: 65, lineHeight: 65, padding: 7 }, style]}>
+    <Text
+      style={[
+        { fontSize: 65, lineHeight: 65, padding: 7, color: textColor },
+        style,
+      ]}
+    >
       {children}
     </Text>
   );
 }
 
 // HEADINGS COMPONENTS AND STYLES
-
-const headingColor = col[700];
 
 export function HeadingXs({
   children,

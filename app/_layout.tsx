@@ -12,6 +12,7 @@ import { Platform, SafeAreaView, StyleSheet, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import { col } from "@/constants/Colors_Styles";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -32,8 +33,9 @@ export default function RootLayout() {
   }, []);
 
   return (
-    <LinearGradient colors={[col[100], col[200]]} style={styles.gradient}>
+    <LinearGradient colors={[col[700], col[800]]} style={styles.gradient}>
       <StatusBar animated={true} />
+
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
         <SafeAreaView style={{ flex: 1 }}>
           <Stack>
@@ -55,5 +57,6 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     height: "100%",
+    position: "relative",
   },
 });

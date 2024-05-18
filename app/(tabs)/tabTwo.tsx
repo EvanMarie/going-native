@@ -1,14 +1,18 @@
 import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { CenterSafeFull } from "../../assets/customComponents/containers";
+import { CenterSafeFull, Flex } from "../../assets/customComponents/containers";
 import { col } from "@/constants/Colors_Styles";
 import { GradientSeven } from "@/assets/customComponents/gradients";
-import { TextXl } from "@/assets/customComponents/textComponents";
+import { TextMd, TextXl } from "@/assets/customComponents/textComponents";
+import { borders } from "@/constants/borders";
 
 export default function TabTwo() {
   return (
     <GradientSeven>
       <TextXl>Tab Two</TextXl>
+      <Flex style={[borders.borderLg100, { borderRadius: 10 }]}>
+        <TextMd>This</TextMd>
+      </Flex>
     </GradientSeven>
   );
 }

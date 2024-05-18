@@ -28,9 +28,21 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="design"
         options={{
-          title: "tabOne",
+          title: "Design",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? "color-palette" : "color-palette-outline"}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="tabOne"
+        options={{
+          title: "One",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={focused ? "link" : "link-outline"}
@@ -40,9 +52,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="Tab Two"
+        name="tabTwo"
         options={{
-          title: "tabTwo",
+          title: "Two",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={focused ? "link" : "link-outline"}

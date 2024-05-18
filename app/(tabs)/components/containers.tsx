@@ -1,7 +1,7 @@
 import React from "react";
-import { SafeAreaView, StyleProp, ViewStyle } from "react-native";
+import { SafeAreaView, StyleProp, View, ViewStyle } from "react-native";
 
-export function CenterSafe({
+export function CenterSafeFull({
   children,
   style,
 }: {
@@ -22,4 +22,36 @@ export function CenterSafe({
       {children}
     </SafeAreaView>
   );
+}
+
+export function FlexColSafeFull({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
+  return (
+    <SafeAreaView
+      style={[
+        {
+          flex: 1,
+          flexDirection: "column",
+        },
+        style,
+      ]}
+    >
+      {children}
+    </SafeAreaView>
+  );
+}
+
+export function Box({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
+  return <View style={style}>{children}</View>;
 }

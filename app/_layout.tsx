@@ -8,7 +8,10 @@ import {
   DefaultTheme,
   ThemeProvider,
 } from "@react-navigation/native";
-import { Platform, SafeAreaView } from "react-native";
+import { Platform, SafeAreaView, StyleSheet, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { LinearGradient } from "expo-linear-gradient";
+import { col } from "@/constants/Colors_Styles";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -19,8 +22,8 @@ export default function RootLayout() {
     const customTextProps = {
       style: {
         fontFamily: Platform.select({
-          ios: "System", // iOS system font
-          android: "Roboto", // Android system font
+          ios: "System",
+          android: "Roboto",
         }),
       },
     };
@@ -29,13 +32,28 @@ export default function RootLayout() {
   }, []);
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <SafeAreaView style={{ flex: 1 }}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="+not-found" />
-        </Stack>
-      </SafeAreaView>
-    </ThemeProvider>
+    <LinearGradient colors={[col[100], col[200]]} style={styles.gradient}>
+      <StatusBar animated={true} />
+      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+        <SafeAreaView style={{ flex: 1 }}>
+          <Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="+not-found" />
+          </Stack>
+        </SafeAreaView>
+      </ThemeProvider>
+    </LinearGradient>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "pink",
+  },
+  gradient: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+  },
+});

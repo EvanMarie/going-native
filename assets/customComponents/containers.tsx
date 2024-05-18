@@ -136,3 +136,50 @@ export function VStackFullWidth({
     </SafeAreaView>
   );
 }
+
+export function FlexFull({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
+  return (
+    <View
+      style={[
+        {
+          display: "flex",
+          width: "100%",
+          flex: 1,
+        },
+        style,
+      ]}
+    >
+      {children}
+    </View>
+  );
+}
+
+export function CenterHorizontalFull({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
+  return (
+    <View
+      style={[
+        {
+          display: "flex",
+          justifyContent: "center",
+          width: "100%",
+          flex: 1,
+        },
+        style,
+      ]}
+    >
+      {children}
+    </View>
+  );
+}

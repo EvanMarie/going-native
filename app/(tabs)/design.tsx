@@ -1,6 +1,8 @@
 import { ScrollView, Text, View } from "react-native";
 import {
+  CenterHorizontalFull,
   Flex,
+  FlexFull,
   PaddedFullStack,
   VStackFullWidth,
   WrapFullWidth,
@@ -53,22 +55,37 @@ export default function DesignScreen() {
     { style: fontStyles.black, label: "fontStyles.black" },
   ];
 
+  function HeaderSection({ title }: { title: string }) {
+    return (
+      <CenterHorizontalFull
+        style={{ backgroundColor: col[800], paddingVertical: 10 }}
+      >
+        <TextLg style={{ color: col[100], textAlign: "center" }}>
+          {title}
+        </TextLg>
+      </CenterHorizontalFull>
+    );
+  }
+
   return (
     <GradientOne>
       <PaddedFullStack>
-        <ScrollView style={{ paddingHorizontal: 10 }}>
+        <ScrollView>
           {/* ------------------------ GRADIENTS ------------------------ */}
           <VStackFullWidth
-            style={{ alignItems: "center", gap: 10, paddingVertical: 10 }}
+            style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
           >
-            <HeadingXl>Color Scheme Gradients</HeadingXl>
+            <HeaderSection
+              title="
+                Color Scheme Gradients"
+            />
             <GradientExamples />
           </VStackFullWidth>
           {/* ------------------------ TEXT SIZES ------------------------ */}
           <VStackFullWidth
-            style={{ alignItems: "center", gap: 10, paddingVertical: 10 }}
+            style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
           >
-            <HeadingLg>Preset Text & Heading Sizes</HeadingLg>
+            <HeaderSection title="Preset Text & Heading Sizes" />
             <WrapFullWidth
               style={{
                 alignItems: "center",
@@ -116,9 +133,9 @@ export default function DesignScreen() {
           </VStackFullWidth>
           {/* ------------------------ FONT WEIGHTS ------------------------ */}
           <VStackFullWidth
-            style={{ alignItems: "center", gap: 10, paddingVertical: 10 }}
+            style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
           >
-            <HeadingLg>Font Weights & Styles</HeadingLg>
+            <HeaderSection title="Font Weights & Styles" />
             <WrapFullWidth
               style={{
                 gap: 10,

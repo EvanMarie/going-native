@@ -30,7 +30,7 @@ export function GradientBox({
 }) {
   return (
     <Flex style={[styles.box, boxShadows.glowLg900]}>
-      <Gradient style={[radii.radiusXl, borders.borderXs900]}>
+      <Gradient style={[radii.radiusXl, borders.borderSm700]}>
         <TextMd style={[{ color: textColor }, textShadows.glowXl]}>
           {label}
         </TextMd>

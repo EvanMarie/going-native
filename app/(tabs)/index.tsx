@@ -46,6 +46,74 @@ import { bordersB, borders } from "@/constants/borders";
 import CustomButton from "@/assets/customComponents/customButton";
 
 export default function DesignScreen() {
+  const colorScheme = [
+    {
+      color: col["light"],
+      label: 'col["light"]',
+      textColor: col["dark"],
+      textShadow: textShadows.glowSm,
+    },
+    {
+      color: col["dark"],
+      label: 'col["dark"]',
+      textColor: col["light"],
+      textShadow: textShadows.leftMd,
+    },
+    {
+      color: col[100],
+      label: "col[100]",
+      textColor: col["dark"],
+      textShadow: textShadows.glowSm,
+    },
+    {
+      color: col[200],
+      label: "col[200]",
+      textColor: col["dark"],
+      textShadow: textShadows.glowSm,
+    },
+    {
+      color: col[300],
+      label: "col[300]",
+      textColor: col["light"],
+      textShadow: textShadows.leftMd,
+    },
+    {
+      color: col[400],
+      label: "col[400]",
+      textColor: col["light"],
+      textShadow: textShadows.leftMd,
+    },
+    {
+      color: col[500],
+      label: "col[500]",
+      textColor: col["light"],
+      textShadow: textShadows.leftMd,
+    },
+    {
+      color: col[600],
+      label: "col[600]",
+      textColor: col["light"],
+      textShadow: textShadows.leftMd,
+    },
+    {
+      color: col[700],
+      label: "col[700]",
+      textColor: col["light"],
+      textShadow: textShadows.leftMd,
+    },
+    {
+      color: col[800],
+      label: "col[800]",
+      textColor: col["light"],
+      textShadow: textShadows.leftMd,
+    },
+    {
+      color: col[900],
+      label: "col[900]",
+      textColor: col["light"],
+      textShadow: textShadows.leftMd,
+    },
+  ];
   const fontWeights = [
     { style: fontStyles.regular, label: "fontStyles.regular" },
     { style: fontStyles.bold, label: "fontStyles.bold" },
@@ -260,18 +328,20 @@ export default function DesignScreen() {
     textColor = col[100],
     backgroundColor = col[600],
     textShadow = textShadows.leftMd,
+    border = borders.borderXs200,
   }: {
     style: any;
     label: string;
     textColor?: string;
     backgroundColor?: string;
     textShadow?: any;
+    border?: any;
   }) {
     return (
       <Flex style={[{ padding: 5 }]}>
         <Flex
           style={[
-            borders.borderXxs200,
+            border,
             {
               paddingHorizontal: 12,
               paddingVertical: 6,
@@ -321,6 +391,31 @@ export default function DesignScreen() {
     <GradientSeven>
       <PaddedFullStack>
         <ScrollView>
+          {/* ------------------------ COLOR SCHEME ------------------------ */}
+          <VStackFullWidth
+            style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
+          >
+            <HeaderSection title="Color Scheme" />
+            <WrapFullWidth
+              style={{
+                alignItems: "center",
+                gap: 12,
+                justifyContent: "center",
+              }}
+            >
+              {colorScheme.map((color, index) => (
+                <TextExampleContainer
+                  key={index}
+                  style={fontStyles.regular}
+                  label={color.label}
+                  textColor={color.textColor}
+                  backgroundColor={color.color}
+                  border={borders.borderXs900}
+                  textShadow={color.textShadow}
+                />
+              ))}
+            </WrapFullWidth>
+          </VStackFullWidth>
           {/* ------------------------ GRADIENTS ------------------------ */}
           <VStackFullWidth
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}

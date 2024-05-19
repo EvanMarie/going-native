@@ -1,29 +1,57 @@
-import { useNavigation } from "expo-router";
-import { StyleProp, TouchableOpacity, ViewStyle } from "react-native";
+import React, { useState } from "react";
+import { col } from "@/constants/Colors_Styles";
+import { textShadows } from "@/constants/shadows";
+import { TouchableOpacity, Text, StyleProp, ViewStyle } from "react-native";
 
-export default function CustomButton({
-  children,
-  onPress,
-  to,
-  style,
-  text,
-}: {
-  children: React.ReactNode;
+interface CustomButtonProps {
   onPress?: () => void;
-  to?: string;
+  scrollTo?: () => void;
   style?: StyleProp<ViewStyle>;
   text: string;
-}) {
-  const navigate = useNavigate;
+}
+
+export default function CustomButton({
+  onPress,
+  scrollTo,
+  style,
+  text,
+}: CustomButtonProps) {
+  const [bg, setBg] = useState("transparent");
+
   const onPressButton = () => {
-    if (to) {
-      navigator.navigate(to);
+    if (scrollTo) {
+      scrollTo();
+    } else if (onPress) {
+      onPress();
     }
   };
 
+  const handlePressIn = () => {
+    setBg(col[800]); // Change to the color you want when pressed
+  };
+
+  const handlePressOut = () => {
+    setBg("transparent"); // Change back to the original color
+  };
+
   return (
-    <TouchableOpacity onPress={onPress} style={style}>
-      {text}
+    <TouchableOpacity
+      onPress={onPressButton}
+      onPressIn={handlePressIn}
+      onPressOut={handlePressOut}
+      style={[
+        {
+          paddingVertical: 8,
+          display: "flex",
+        },
+        style,
+      ]}
+    >
+      <Text
+        style={[{ backgroundColor: bg, color: col[100] }, textShadows.rightMd]}
+      >
+        {text}
+      </Text>
     </TouchableOpacity>
   );
 }

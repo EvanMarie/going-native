@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { SafeAreaView, StyleProp, View, ViewStyle } from "react-native";
 
 export function CenterSafeFull({
@@ -114,28 +114,34 @@ export function WrapFullWidth({
   );
 }
 
-export function VStackFullWidth({
-  children,
-  style,
-}: {
+interface VStackFullWidthProps {
   children: React.ReactNode;
   style?: StyleProp<ViewStyle>;
-}) {
-  return (
-    <SafeAreaView
-      style={[
-        {
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
-        },
-        style,
-      ]}
-    >
-      {children}
-    </SafeAreaView>
-  );
+  id?: string;
 }
+
+const VStackFullWidth = forwardRef<View, VStackFullWidthProps>(
+  ({ children, style, id }, ref) => {
+    return (
+      <SafeAreaView
+        id={id}
+        ref={ref}
+        style={[
+          {
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+          },
+          style,
+        ]}
+      >
+        {children}
+      </SafeAreaView>
+    );
+  }
+);
+
+export default VStackFullWidth;
 
 export function FlexFull({
   children,

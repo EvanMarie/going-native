@@ -18,18 +18,18 @@ Welcome to the React Native and Expo Template repository! This template is desig
 
 - **Collapsible Containers:** Organize your app's content effectively with collapsible containers. The template includes a customizable collapsible component that allows users to expand and collapse sections, optimizing screen real estate and enhancing navigation.
 
-<div style="display: flex; width: 100%; flex-wrap: wrap; justify-content: space-evenly; gap: 3vh;">
+<div style="display: flex; width: 100%; flex-wrap: wrap; justify-content: center; gap: 3vh;">
 <img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native1.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
-<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native2.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
-<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native3.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
-<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native4.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
-<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native5.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
-<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native6.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
-<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native7.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
-<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native8.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
-<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native9.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
-<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native10.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
-<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native11.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
+<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native2.PNG?quality=50" alt="App Screenshot 2" width="30%"/>
+<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native3.PNG?quality=50" alt="App Screenshot 3" width="30%"/>
+<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native4.PNG?quality=50" alt="App Screenshot 4" width="30%"/>
+<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native5.PNG?quality=50" alt="App Screenshot 5" width="30%"/>
+<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native6.PNG?quality=50" alt="App Screenshot 6" width="30%"/>
+<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native7.PNG?quality=50" alt="App Screenshot 7" width="30%"/>
+<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native8.PNG?quality=50" alt="App Screenshot 8" width="30%"/>
+<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native9.PNG?quality=50" alt="App Screenshot 9" width="30%"/>
+<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native10.PNG?quality=50" alt="App Screenshot 10" width="30%"/>
+<img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native11.PNG?quality=50" alt="App Screenshot 11" width="30%"/>
 </div>
 
 ## Getting Started

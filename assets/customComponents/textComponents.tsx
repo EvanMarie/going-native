@@ -38,7 +38,7 @@ export const fontStyles = StyleSheet.create({
   semiBold: {
     fontFamily: Platform.select({
       ios: systemFont,
-      android: "Roboto-Medium",
+      android: "Roboto",
     }),
     fontWeight: Platform.select({
       ios: "500",

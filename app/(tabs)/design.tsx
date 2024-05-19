@@ -1,4 +1,4 @@
-import { ScrollView, Text, View } from "react-native";
+import { Button, ScrollView, Text, View } from "react-native";
 import {
   CenterHorizontalFull,
   Flex,
@@ -7,10 +7,7 @@ import {
   VStackFullWidth,
   WrapFullWidth,
 } from "../../assets/customComponents/containers";
-import {
-  GradientOne,
-  GradientSeven,
-} from "../../assets/customComponents/gradients";
+import { GradientSeven } from "../../assets/customComponents/gradients";
 import GradientExamples from "../../assets/customComponents/designExamples/gradientExamples";
 import {
   Heading10xl,
@@ -45,6 +42,8 @@ import {
 } from "../../assets/customComponents/textComponents";
 import { col } from "@/constants/Colors_Styles";
 import { boxShadows, textShadows } from "@/constants/shadows";
+import { bordersB, borders } from "@/constants/borders";
+import CustomButton from "@/assets/customComponents/customButton";
 
 export default function DesignScreen() {
   const fontWeights = [
@@ -192,37 +191,37 @@ export default function DesignScreen() {
     {
       style: textShadows.glowSm,
       label: "textShadows.glowSm",
-      textColor: col[900],
+      textColor: col[800],
       backgroundColor: col[900],
     },
     {
       style: textShadows.glowMd,
       label: "textShadows.glowMd",
-      textColor: col[900],
+      textColor: col[800],
       backgroundColor: col[900],
     },
     {
       style: textShadows.glowLg,
       label: "textShadows.glowLg",
-      textColor: col[900],
+      textColor: col[800],
       backgroundColor: col[900],
     },
     {
       style: textShadows.glowXl,
       label: "textShadows.glowXl",
-      textColor: col[900],
+      textColor: col[800],
       backgroundColor: col[900],
     },
     {
       style: textShadows.glow2xl,
       label: "textShadows.glow2xl",
-      textColor: col[900],
+      textColor: col[800],
       backgroundColor: col[900],
     },
     {
       style: textShadows.glow3xl,
       label: "textShadows.glow3xl",
-      textColor: col[900],
+      textColor: col[800],
       backgroundColor: col[900],
     },
   ];
@@ -231,16 +230,20 @@ export default function DesignScreen() {
     return (
       <Flex style={[boxShadows.glowXs200, { padding: 5 }]}>
         <Flex
-          style={{
-            backgroundColor: col[800],
-            padding: 10,
-            borderRadius: 10,
-          }}
+          style={[
+            borders.borderXs500,
+            {
+              backgroundColor: col[800],
+              padding: 10,
+              borderRadius: 10,
+            },
+          ]}
         >
           <TextLg
             style={[
               fontStyles.semiBold,
               textShadows.left2xl,
+
               { color: col[200], textAlign: "center" },
             ]}
           >
@@ -265,9 +268,10 @@ export default function DesignScreen() {
     textShadow?: any;
   }) {
     return (
-      <Flex style={[boxShadows.glowMd900, { padding: 5 }]}>
+      <Flex style={[{ padding: 5 }]}>
         <Flex
           style={[
+            borders.borderXxs200,
             {
               paddingHorizontal: 12,
               paddingVertical: 6,
@@ -315,7 +319,28 @@ export default function DesignScreen() {
 
   return (
     <GradientSeven>
-      <PaddedFullStack>
+      <PaddedFullStack style={{ paddingTop: 80 }}>
+        <FlexFull
+          style={[
+            {
+              position: "absolute",
+              top: 0,
+              right: 0,
+              left: 0,
+              backgroundColor: col[800],
+              height: 80,
+              zIndex: 20,
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              alignItems: "flex-end",
+            },
+            bordersB.borderBxs400,
+          ]}
+        >
+          <CustomButton text="Gradients" />
+          <CustomButton text="Text" />
+          <CustomButton text="Shadows" />
+        </FlexFull>
         <ScrollView>
           {/* ------------------------ GRADIENTS ------------------------ */}
           <VStackFullWidth

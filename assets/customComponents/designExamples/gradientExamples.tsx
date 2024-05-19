@@ -15,8 +15,9 @@ import {
   GradientTen,
 } from "../gradients";
 import { col } from "@/constants/Colors_Styles";
+import { TextMd } from "../textComponents";
+import { borders, radii } from "@/constants/borders";
 import { boxShadows, textShadows } from "@/constants/shadows";
-import { TextLg, TextMd } from "../textComponents";
 
 export function GradientBox({
   label,
@@ -24,12 +25,12 @@ export function GradientBox({
   textColor,
 }: {
   label: string;
-  Gradient: React.ComponentType<{ children?: ReactNode }>;
+  Gradient: React.ComponentType<{ children?: ReactNode; style: any }>;
   textColor?: string;
 }) {
   return (
-    <Flex style={[{ borderRadius: 12 }, styles.box, boxShadows["xl"]]}>
-      <Gradient>
+    <Flex style={[styles.box, boxShadows.glowLg900]}>
+      <Gradient style={[radii.radiusXl, borders.borderXs900]}>
         <TextMd style={[{ color: textColor }, textShadows.glowXl]}>
           {label}
         </TextMd>

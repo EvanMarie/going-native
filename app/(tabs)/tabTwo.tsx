@@ -1,7 +1,4 @@
-import { Text } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { CenterSafeFull, Flex } from "../../assets/customComponents/containers";
-import { col } from "@/constants/Colors_Styles";
+import { Flex } from "@/assets/customComponents/containers";
 import { GradientSeven } from "@/assets/customComponents/gradients";
 import { TextMd, TextXl } from "@/assets/customComponents/textComponents";
 import { borders } from "@/constants/borders";

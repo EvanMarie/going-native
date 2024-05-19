@@ -18,7 +18,7 @@ Welcome to the React Native and Expo Template repository! This template is desig
 
 - **Collapsible Containers:** Organize your app's content effectively with collapsible containers. The template includes a customizable collapsible component that allows users to expand and collapse sections, optimizing screen real estate and enhancing navigation.
 
-<div style="display: flex; width: 100%; flex-wrap: wrap; justify-content: space-evenly; gap: 1vh;">
+<div style="display: flex; width: 100%; flex-wrap: wrap; justify-content: space-evenly; gap: 3vh;">
 <img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native1.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
 <img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native2.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
 <img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native3.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
@@ -89,8 +89,7 @@ The React Native and Expo Template incorporates various open-source libraries an
 
 If you have any questions, suggestions, or feedback, please feel free to reach out:
 
-- Email: your-email@example.com
-- Twitter: [@yourusername](https://twitter.com/yourusername)
-- GitHub: [your-username](https://github.com/your-username)
+- Email: evancarr53@gmail.com
+- Twitter: [@DarkVioletAI](https://twitter.com/DarkVioletAI)
 
 Happy coding with React Native and Expo!

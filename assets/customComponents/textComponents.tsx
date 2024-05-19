@@ -8,7 +8,7 @@ const systemFont = Platform.select({
 });
 
 export const headingColor = col[200];
-export const defaultTextColor = col[100];
+export const defaultTextColor = col["light"];
 
 export const fontStyles = StyleSheet.create({
   regular: {
@@ -55,15 +55,17 @@ export function TextXs({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 13, lineHeight: 13, padding: 7, color: textColor },
+        { fontSize: 13, lineHeight: 13, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -76,15 +78,17 @@ export function TextSm({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 17, lineHeight: 17, padding: 7, color: textColor },
+        { fontSize: 17, lineHeight: 17, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -97,15 +101,17 @@ export function TextMd({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 21, lineHeight: 21, padding: 7, color: textColor },
+        { fontSize: 21, lineHeight: 21, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -118,15 +124,17 @@ export function TextLg({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 25, lineHeight: 25, padding: 7, color: textColor },
+        { fontSize: 25, lineHeight: 25, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -139,15 +147,17 @@ export function TextXl({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 29, lineHeight: 29, padding: 7, color: textColor },
+        { fontSize: 29, lineHeight: 29, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -160,15 +170,17 @@ export function Text2xl({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 33, lineHeight: 33, padding: 7, color: textColor },
+        { fontSize: 33, lineHeight: 33, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -181,15 +193,17 @@ export function Text3xl({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 37, lineHeight: 37, padding: 7, color: textColor },
+        { fontSize: 37, lineHeight: 37, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -202,15 +216,17 @@ export function Text4xl({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 41, lineHeight: 41, padding: 7, color: textColor },
+        { fontSize: 41, lineHeight: 41, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -223,15 +239,17 @@ export function Text5xl({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 45, lineHeight: 45, padding: 7, color: textColor },
+        { fontSize: 45, lineHeight: 45, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -244,15 +262,17 @@ export function Text6xl({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 49, lineHeight: 49, padding: 7, color: textColor },
+        { fontSize: 49, lineHeight: 49, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -265,15 +285,17 @@ export function Text7xl({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 53, lineHeight: 53, padding: 7, color: textColor },
+        { fontSize: 53, lineHeight: 53, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -286,15 +308,17 @@ export function Text8xl({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 57, lineHeight: 57, padding: 7, color: textColor },
+        { fontSize: 57, lineHeight: 57, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -307,15 +331,17 @@ export function Text9xl({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 61, lineHeight: 61, padding: 7, color: textColor },
+        { fontSize: 61, lineHeight: 61, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -328,15 +354,17 @@ export function Text10xl({
   children,
   textColor = defaultTextColor,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   textColor?: string;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
-        { fontSize: 65, lineHeight: 65, padding: 7, color: textColor },
+        { fontSize: 65, lineHeight: 65, padding: padding, color: textColor },
         style,
       ]}
     >
@@ -350,15 +378,17 @@ export function Text10xl({
 export function HeadingXs({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 16, lineHeight: 16, padding: 7, color: headingColor },
+        { fontSize: 16, lineHeight: 16, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -370,8 +400,10 @@ export function HeadingXs({
 export function HeadingSm({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
@@ -379,7 +411,12 @@ export function HeadingSm({
       style={
         (fontStyles.semiBold,
         [
-          { fontSize: 20, lineHeight: 20, padding: 7, color: headingColor },
+          {
+            fontSize: 20,
+            lineHeight: 20,
+            padding: padding,
+            color: headingColor,
+          },
           style,
         ])
       }
@@ -392,15 +429,17 @@ export function HeadingSm({
 export function HeadingMd({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 24, lineHeight: 24, padding: 7, color: headingColor },
+        { fontSize: 24, lineHeight: 24, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -412,15 +451,17 @@ export function HeadingMd({
 export function HeadingLg({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 28, lineHeight: 28, padding: 7, color: headingColor },
+        { fontSize: 28, lineHeight: 28, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -432,15 +473,17 @@ export function HeadingLg({
 export function HeadingXl({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 32, lineHeight: 32, padding: 7, color: headingColor },
+        { fontSize: 32, lineHeight: 32, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -452,15 +495,17 @@ export function HeadingXl({
 export function Heading2xl({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 36, lineHeight: 36, padding: 7, color: headingColor },
+        { fontSize: 36, lineHeight: 36, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -472,15 +517,17 @@ export function Heading2xl({
 export function Heading3xl({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 40, lineHeight: 40, padding: 7, color: headingColor },
+        { fontSize: 40, lineHeight: 40, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -492,15 +539,17 @@ export function Heading3xl({
 export function Heading4xl({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 44, lineHeight: 44, padding: 7, color: headingColor },
+        { fontSize: 44, lineHeight: 44, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -512,15 +561,17 @@ export function Heading4xl({
 export function Heading5xl({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 48, lineHeight: 48, padding: 7, color: headingColor },
+        { fontSize: 48, lineHeight: 48, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -532,15 +583,17 @@ export function Heading5xl({
 export function Heading6xl({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 52, lineHeight: 52, padding: 7, color: headingColor },
+        { fontSize: 52, lineHeight: 52, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -552,15 +605,17 @@ export function Heading6xl({
 export function Heading7xl({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 56, lineHeight: 56, padding: 7, color: headingColor },
+        { fontSize: 56, lineHeight: 56, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -572,15 +627,17 @@ export function Heading7xl({
 export function Heading8xl({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 60, lineHeight: 60, padding: 7, color: headingColor },
+        { fontSize: 60, lineHeight: 60, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -592,15 +649,17 @@ export function Heading8xl({
 export function Heading9xl({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
+  padding?: number;
   style?: StyleProp<TextStyle>;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 64, lineHeight: 64, padding: 7, color: headingColor },
+        { fontSize: 64, lineHeight: 64, padding: padding, color: headingColor },
         style,
       ]}
     >
@@ -612,15 +671,17 @@ export function Heading9xl({
 export function Heading10xl({
   children,
   style,
+  padding = 7,
 }: {
   children: React.ReactNode;
   style?: StyleProp<TextStyle>;
+  padding?: number;
 }) {
   return (
     <Text
       style={[
         fontStyles.semiBold,
-        { fontSize: 68, lineHeight: 68, padding: 7, color: headingColor },
+        { fontSize: 68, lineHeight: 68, padding: padding, color: headingColor },
         style,
       ]}
     >

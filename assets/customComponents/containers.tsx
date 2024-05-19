@@ -63,7 +63,11 @@ export function Flex({
   children: React.ReactNode;
   style?: StyleProp<ViewStyle>;
 }) {
-  return <View style={[{ display: "flex" }, style]}>{children}</View>;
+  return (
+    <View style={[{ display: "flex", flexDirection: "row" }, style]}>
+      {children}
+    </View>
+  );
 }
 
 export function PaddedFullStack({
@@ -157,6 +161,7 @@ export function FlexFull({
           display: "flex",
           width: "100%",
           flex: 1,
+          flexDirection: "row",
         },
         style,
       ]}

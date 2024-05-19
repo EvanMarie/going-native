@@ -194,3 +194,23 @@ export function CenterHorizontalFull({
     </View>
   );
 }
+
+export const VStack = forwardRef<View, VStackFullWidthProps>(
+  ({ children, style, id }, ref) => {
+    return (
+      <SafeAreaView
+        id={id}
+        ref={ref}
+        style={[
+          {
+            display: "flex",
+            flexDirection: "column",
+          },
+          style,
+        ]}
+      >
+        {children}
+      </SafeAreaView>
+    );
+  }
+);

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { Box, Flex } from "../containers"; // Adjust the import path accordingly
+import { Box, Flex, FlexFull } from "../containers"; // Adjust the import path accordingly
 import { WrapFullWidth } from "../containers"; // Adjust the import path accordingly
 import {
   GradientOne,
@@ -31,9 +31,18 @@ export function GradientBox({
   return (
     <Flex style={[styles.box, boxShadows.glowLg900]}>
       <Gradient style={[radii.radiusXl, borders.borderSm700]}>
-        <TextMd style={[{ color: textColor }, textShadows.glowXl]}>
-          {label}
-        </TextMd>
+        <FlexFull
+          style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+        >
+          <TextMd
+            style={[
+              { color: textColor, textAlign: "center" },
+              textShadows.glowXl,
+            ]}
+          >
+            {label}
+          </TextMd>
+        </FlexFull>
       </Gradient>
     </Flex>
   );
@@ -72,7 +81,7 @@ const gradients = [
     textColor: col["light"],
   },
   { label: "Gradient Nine", component: GradientNine, textColor: col["light"] },
-  { label: "Gradient Ten", component: GradientTen, textColor: col["light"] },
+  { label: "Gradient Ten", component: GradientTen, textColor: col["dark"] },
 ];
 
 export default function GradientExamples() {

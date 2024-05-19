@@ -57,7 +57,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="demoOne"
         options={{
-          title: "Demo 1",
+          title: "Parallax",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={focused ? "link" : "link-outline"}
@@ -69,7 +69,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="demoTwo"
         options={{
-          title: "Demo 2",
+          title: "Icon Page",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={focused ? "link" : "link-outline"}

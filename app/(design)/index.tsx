@@ -5,6 +5,7 @@ import VStackFullWidth, {
   Flex,
   FlexFull,
   PaddedFullStack,
+  VStack,
   WrapFullWidth,
 } from "../../assets/customComponents/containers";
 import { GradientSeven } from "../../assets/customComponents/gradients";
@@ -42,7 +43,7 @@ import {
 } from "../../assets/customComponents/textComponents";
 import { col } from "@/constants/Colors_Styles";
 import { boxShadows, textShadows } from "@/constants/shadows";
-import { bordersB, borders } from "@/constants/borders";
+import { bordersB, borders, bordersT, radii } from "@/constants/borders";
 import CustomButton from "@/assets/customComponents/customButton";
 
 export default function DesignScreen() {
@@ -387,6 +388,39 @@ export default function DesignScreen() {
     );
   }
 
+  const fullBorderExamples = [
+    {
+      border: borders.borderXs100,
+      label: "borders.borderXs100",
+    },
+    { border: borders.borderSm100, label: "borders.borderSm100" },
+    { border: borders.borderMd100, label: "borders.borderMd100" },
+    { border: borders.borderLg100, label: "borders.borderLg100" },
+    { border: borders.borderXl100, label: "borders.borderXl100" },
+  ];
+
+  const bottomBorderExamples = [
+    {
+      border: bordersB.borderBxs100,
+      label: "bordersB.borderBxs100",
+    },
+    { border: bordersB.borderBsm100, label: "bordersB.borderBsm100" },
+    { border: bordersB.borderBmd100, label: "bordersB.borderBmd100" },
+    { border: bordersB.borderBlg100, label: "bordersB.borderBlg100" },
+    { border: bordersB.borderBxl100, label: "bordersB.borderBxl100" },
+  ];
+
+  const topBorderExamples = [
+    {
+      border: bordersT.borderTxs100,
+      label: "bordersT.borderTxs100",
+    },
+    { border: bordersT.borderTsm100, label: "bordersT.borderTsm100" },
+    { border: bordersT.borderTmd100, label: "bordersT.borderTmd100" },
+    { border: bordersT.borderTlg100, label: "bordersT.borderTlg100" },
+    { border: bordersT.borderTxl100, label: "bordersT.borderTxl100" },
+  ];
+
   return (
     <GradientSeven>
       <PaddedFullStack>
@@ -535,6 +569,69 @@ export default function DesignScreen() {
                   shadow={boxShadow.style}
                   label={boxShadow.label}
                 />
+              ))}
+            </WrapFullWidth>
+          </VStackFullWidth>
+          {/* ------------------------ BORDERS ------------------------ */}
+          <VStackFullWidth
+            style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
+          >
+            <HeaderSection title="Borders" />
+            <TextSm>
+              Each of the following are available in all theme colors using the
+              similar variable names.
+            </TextSm>
+            <WrapFullWidth
+              style={{
+                gap: 15,
+                borderRadius: 10,
+                justifyContent: "space-evenly",
+              }}
+            >
+              {fullBorderExamples.map((border, index) => (
+                <View
+                  key={index}
+                  style={[
+                    {
+                      padding: 5,
+                      alignItems: "center",
+                      borderRadius: 10,
+                    },
+                    border.border,
+                  ]}
+                >
+                  <TextXs style={{ color: col[100] }}>{border.label}</TextXs>
+                </View>
+              ))}
+              {bottomBorderExamples.map((border, index) => (
+                <View
+                  key={index}
+                  style={[
+                    {
+                      padding: 5,
+                      alignItems: "center",
+                      borderRadius: 10,
+                    },
+                    border.border,
+                  ]}
+                >
+                  <TextXs style={{ color: col[100] }}>{border.label}</TextXs>
+                </View>
+              ))}
+              {topBorderExamples.map((border, index) => (
+                <View
+                  key={index}
+                  style={[
+                    {
+                      padding: 5,
+                      alignItems: "center",
+                      borderRadius: 10,
+                    },
+                    border.border,
+                  ]}
+                >
+                  <TextXs style={{ color: col[100] }}>{border.label}</TextXs>
+                </View>
               ))}
             </WrapFullWidth>
           </VStackFullWidth>

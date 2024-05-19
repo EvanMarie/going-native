@@ -26,7 +26,7 @@ export default function ScrollViewExample() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  backgroundColor: col[590],
+                  backgroundColor: col[400],
                   padding: 10,
                 },
               ]}

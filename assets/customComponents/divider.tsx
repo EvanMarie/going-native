@@ -4,7 +4,7 @@ import { View } from "react-native";
 export default function Divider({
   height = 1.5,
   width = "95%",
-  color = col[130],
+  color = col[340],
   margin,
   padding,
   border,

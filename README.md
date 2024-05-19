@@ -18,7 +18,7 @@ Welcome to the React Native and Expo Template repository! This template is desig
 
 - **Collapsible Containers:** Organize your app's content effectively with collapsible containers. The template includes a customizable collapsible component that allows users to expand and collapse sections, optimizing screen real estate and enhancing navigation.
 
-<div style="display: flex; width: 100%; flex-wrap: wrap; justify-content: center;">
+<div style="display: flex; width: 100%; flex-wrap: wrap; justify-content: space-evenly;">
 <img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native1.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
 <img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native2.PNG?quality=50" alt="App Screenshot 1" width="30%"/>
 <img src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/react-native3.PNG?quality=50" alt="App Screenshot 1" width="30%"/>

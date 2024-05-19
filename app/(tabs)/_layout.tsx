@@ -4,8 +4,7 @@ import React from "react";
 import { TabBarIcon } from "@/components/navigation/TabBarIcon";
 import { Colors } from "@/constants/Colors_Styles";
 import { useColorScheme } from "@/hooks/useColorScheme";
-import { Platform, StyleSheet, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Platform } from "react-native";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -31,18 +30,6 @@ export default function TabLayout() {
         },
       }}
     >
-      {/* <Tabs.Screen
-        name="index"
-        options={{
-          title: "Home",
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "home" : "home-outline"}
-              color={color}
-            />
-          ),
-        }}
-      /> */}
       <Tabs.Screen
         name="design"
         options={{
@@ -94,14 +81,3 @@ export default function TabLayout() {
     </Tabs>
   );
 }
-
-const styles = StyleSheet.create({
-  tabBarIOS: {
-    height: 55,
-    paddingVertical: 10,
-  },
-  tabBarAndroid: {
-    height: 55,
-    paddingBottom: 10,
-  },
-});

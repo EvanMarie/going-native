@@ -45,6 +45,7 @@ import { col } from "@/constants/Colors_Styles";
 import { boxShadows, textShadows } from "@/constants/shadows";
 import { bordersB, borders, bordersT, radii } from "@/constants/borders";
 import CustomButton from "@/assets/customComponents/customButton";
+import { TextLineHeightsExample } from "@/assets/customComponents/designExamples/textLineHeights";
 
 export default function DesignScreen() {
   const colorScheme = [
@@ -300,20 +301,21 @@ export default function DesignScreen() {
       <Flex style={[boxShadows.glowXs200, { padding: 5 }]}>
         <Flex
           style={[
-            borders.borderXs500,
+            borders.borderSm900,
             {
-              backgroundColor: col[800],
-              padding: 10,
-              borderRadius: 10,
+              backgroundColor: col[300],
+              paddingVertical: 5,
+              paddingHorizontal: 10,
+              borderRadius: 14,
             },
           ]}
         >
           <TextLg
             style={[
-              fontStyles.semiBold,
-              textShadows.left2xl,
+              fontStyles.bold,
+              textShadows.glowSm,
 
-              { color: col[200], textAlign: "center" },
+              { color: col["dark"], textAlign: "center" },
             ]}
           >
             {title}
@@ -390,35 +392,35 @@ export default function DesignScreen() {
 
   const fullBorderExamples = [
     {
-      border: borders.borderXs100,
-      label: "borders.borderXs100",
+      border: borders.borderXs300,
+      label: "borders.borderXs300",
     },
-    { border: borders.borderSm100, label: "borders.borderSm100" },
-    { border: borders.borderMd100, label: "borders.borderMd100" },
-    { border: borders.borderLg100, label: "borders.borderLg100" },
-    { border: borders.borderXl100, label: "borders.borderXl100" },
+    { border: borders.borderSm300, label: "borders.borderSm300" },
+    { border: borders.borderMd300, label: "borders.borderMd300" },
+    { border: borders.borderLg300, label: "borders.borderLg300" },
+    { border: borders.borderXl300, label: "borders.borderXl300" },
   ];
 
   const bottomBorderExamples = [
     {
-      border: bordersB.borderBxs100,
-      label: "bordersB.borderBxs100",
+      border: bordersB.borderBxs300,
+      label: "bordersB.borderBxs300",
     },
-    { border: bordersB.borderBsm100, label: "bordersB.borderBsm100" },
-    { border: bordersB.borderBmd100, label: "bordersB.borderBmd100" },
-    { border: bordersB.borderBlg100, label: "bordersB.borderBlg100" },
-    { border: bordersB.borderBxl100, label: "bordersB.borderBxl100" },
+    { border: bordersB.borderBsm300, label: "bordersB.borderBsm300" },
+    { border: bordersB.borderBmd300, label: "bordersB.borderBmd300" },
+    { border: bordersB.borderBlg300, label: "bordersB.borderBlg300" },
+    { border: bordersB.borderBxl300, label: "bordersB.borderBxl300" },
   ];
 
   const topBorderExamples = [
     {
-      border: bordersT.borderTxs100,
-      label: "bordersT.borderTxs100",
+      border: bordersT.borderTxs300,
+      label: "bordersT.borderTxs300",
     },
-    { border: bordersT.borderTsm100, label: "bordersT.borderTsm100" },
-    { border: bordersT.borderTmd100, label: "bordersT.borderTmd100" },
-    { border: bordersT.borderTlg100, label: "bordersT.borderTlg100" },
-    { border: bordersT.borderTxl100, label: "bordersT.borderTxl100" },
+    { border: bordersT.borderTsm300, label: "bordersT.borderTsm300" },
+    { border: bordersT.borderTmd300, label: "bordersT.borderTmd300" },
+    { border: bordersT.borderTlg300, label: "bordersT.borderTlg300" },
+    { border: bordersT.borderTxl300, label: "bordersT.borderTxl300" },
   ];
 
   return (
@@ -489,28 +491,46 @@ export default function DesignScreen() {
               <Text9xl>Text9xl</Text9xl>
               <Text10xl>Text10xl</Text10xl>
             </WrapFullWidth>
-            <WrapFullWidth
-              style={{
-                alignItems: "center",
-                gap: 12,
-                justifyContent: "center",
-              }}
+            {/* ------------------------ TEXT LINE HEIGHTS ------------------------ */}
+            <VStackFullWidth
+              style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
             >
-              <HeadingXs>HeadingXs</HeadingXs>
-              <HeadingSm>HeadingSm</HeadingSm>
-              <HeadingMd>HeadingMd</HeadingMd>
-              <HeadingLg>HeadingLg</HeadingLg>
-              <HeadingXl>HeadingXl</HeadingXl>
-              <Heading2xl>Heading2xl</Heading2xl>
-              <Heading3xl>Heading3xl</Heading3xl>
-              <Heading4xl>Heading4xl</Heading4xl>
-              <Heading5xl>Heading5xl</Heading5xl>
-              <Heading6xl>Heading6xl</Heading6xl>
-              <Heading7xl>Heading7xl</Heading7xl>
-              <Heading8xl>Heading8xl</Heading8xl>
-              <Heading9xl>Heading9xl</Heading9xl>
-              <Heading10xl>Heading10xl</Heading10xl>
-            </WrapFullWidth>
+              <HeaderSection title="Text Line Heights" />
+              <TextSm style={{ color: col[300] }}>
+                Comparable line heights are available for heights: xs, sm, md,
+                lg, xl, and xxl for all text and heading components. These
+                examples use text size md.
+              </TextSm>
+              <TextLineHeightsExample />
+            </VStackFullWidth>
+            {/* ------------------------ HEADINGS ------------------------ */}
+            <VStackFullWidth
+              style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
+            >
+              <HeaderSection title="Headings" />
+              <WrapFullWidth
+                style={{
+                  alignItems: "center",
+                  gap: 12,
+                  justifyContent: "center",
+                }}
+              >
+                <HeadingXs>HeadingXs</HeadingXs>
+                <HeadingSm>HeadingSm</HeadingSm>
+                <HeadingMd>HeadingMd</HeadingMd>
+                <HeadingLg>HeadingLg</HeadingLg>
+                <HeadingXl>HeadingXl</HeadingXl>
+                <Heading2xl>Heading2xl</Heading2xl>
+                <Heading3xl>Heading3xl</Heading3xl>
+                <Heading4xl>Heading4xl</Heading4xl>
+                <Heading5xl>Heading5xl</Heading5xl>
+                <Heading6xl>Heading6xl</Heading6xl>
+                <Heading7xl>Heading7xl</Heading7xl>
+                <Heading8xl>Heading8xl</Heading8xl>
+                <Heading9xl>Heading9xl</Heading9xl>
+                <Heading10xl>Heading10xl</Heading10xl>
+              </WrapFullWidth>
+            </VStackFullWidth>
           </VStackFullWidth>
           {/* ------------------------ FONT WEIGHTS ------------------------ */}
           <VStackFullWidth

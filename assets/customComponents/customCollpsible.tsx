@@ -9,9 +9,27 @@ import { CustomComponentView } from "./customComponentView";
 export function CustomCollapsible({
   children,
   title,
-}: PropsWithChildren & { title: string }) {
+  paddingHorizontal = 10,
+  paddingVertical = 5,
+}: {
+  children: React.ReactNode;
+  title: string;
+  paddingHorizontal?: number;
+  paddingVertical?: number;
+}) {
   const [isOpen, setIsOpen] = useState(false);
-
+  const styles = StyleSheet.create({
+    heading: {
+      paddingHorizontal: paddingHorizontal,
+      paddingVertical: paddingVertical,
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 5,
+    },
+    content: {
+      paddingStart: 35,
+    },
+  });
   return (
     <CustomComponentView>
       <TouchableOpacity
@@ -20,26 +38,17 @@ export function CustomCollapsible({
         activeOpacity={0.8}
       >
         <Ionicons
-          name={isOpen ? "chevron-down" : "chevron-forward-outline"}
-          size={23}
+          name={
+            isOpen
+              ? "chevron-down-circle-outline"
+              : "chevron-forward-circle-outline"
+          }
+          size={26}
           color={col[200]}
         />
-        <TextLg>{title}</TextLg>
+        <TextLg style={{ color: col[200] }}>{title}</TextLg>
       </TouchableOpacity>
       {isOpen && <ThemedView style={styles.content}>{children}</ThemedView>}
     </CustomComponentView>
   );
 }
-
-const styles = StyleSheet.create({
-  heading: {
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 5,
-  },
-  content: {
-    paddingStart: 35,
-  },
-});

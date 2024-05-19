@@ -32,16 +32,14 @@ export default function RootLayout() {
   }, []);
 
   return (
-    <LinearGradient colors={[col[700], col[800]]} style={styles.gradient}>
+    <LinearGradient colors={[col[800], col[900]]} style={styles.gradient}>
       <StatusBar animated={true} />
 
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <SafeAreaView style={{ flex: 1 }}>
-          <Stack>
-            <Stack.Screen name="(design)" options={{ headerShown: false }} />
-            <Stack.Screen name="+not-found" />
-          </Stack>
-        </SafeAreaView>
+        <Stack>
+          <Stack.Screen name="(design)" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" />
+        </Stack>
       </ThemeProvider>
     </LinearGradient>
   );

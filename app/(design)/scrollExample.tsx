@@ -1,4 +1,5 @@
 import {
+  GradientEight,
   GradientOne,
   GradientSeven,
 } from "@/assets/customComponents/gradients";
@@ -8,12 +9,12 @@ import { ScrollView } from "react-native";
 
 export default function ScrollExample() {
   return (
-    <GradientSeven>
+    <GradientEight>
       <PaddedFullStack>
         <ScrollView style={{ width: "100%" }}>
           <ScrollViewExample />
         </ScrollView>
       </PaddedFullStack>
-    </GradientSeven>
+    </GradientEight>
   );
 }

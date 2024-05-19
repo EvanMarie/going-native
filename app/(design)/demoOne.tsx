@@ -16,6 +16,7 @@ import CustomParallaxScroll from "@/assets/customComponents/customParallaxScroll
 import { borders, bordersT } from "@/constants/borders";
 import { boxShadows, textShadows } from "@/constants/shadows";
 import { CustomCollapsible } from "@/assets/customComponents/customCollpsible";
+import { exampleText } from "@/assets/customComponents/designExamples/textLineHeights";
 
 function ExampleContainer({
   item,
@@ -83,37 +84,30 @@ const sampleItems = [
 export default function DemoOne() {
   return (
     <CustomParallaxScroll
-      headerHeight={200}
+      headerHeight={300}
       headerImage={
         <Image source={require("../../assets/images/header.webp")} />
       }
       headerBackgroundColor={{ dark: col[800], light: col[200] }}
-      headerText="Parallax Header"
+      headerText="Parallax Header & Custom Collapsible Container"
     >
       <GradientSix>
         <VStackFullWidth style={[bordersT.borderTxs800]}>
           <CustomCollapsible title="Collapsible Container One">
-            <TextSm>
-              This is some content for the first collapsible container. It is
-              some great content
-            </TextSm>
+            <TextMd>{exampleText}</TextMd>
           </CustomCollapsible>
           <CustomCollapsible title="Collapsible Container Two">
-            <TextSm>
-              This is some content for the second collapsible container. It is
-              some great content
-            </TextSm>
+            <TextMd>{exampleText}</TextMd>
           </CustomCollapsible>
-          {sampleItems.map((item, index) => (
-            <ExampleContainer
-              key={index}
-              item={{
-                lineXl: item.itemXl,
-                lineMd: item.itemMd,
-                lineSm: item.itemSm,
-              }}
-            />
-          ))}
+          <CustomCollapsible title="Collapsible Container Three">
+            <TextMd>{exampleText}</TextMd>
+          </CustomCollapsible>
+          <CustomCollapsible title="Collapsible Container Four">
+            <TextMd>{exampleText}</TextMd>
+          </CustomCollapsible>
+          <CustomCollapsible title="Collapsible Container Five">
+            <TextMd>{exampleText}</TextMd>
+          </CustomCollapsible>
         </VStackFullWidth>
       </GradientSix>
     </CustomParallaxScroll>

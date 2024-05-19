@@ -5,12 +5,11 @@ import VStackFullWidth, {
 } from "@/assets/customComponents/containers";
 import { GradientSeven } from "../../assets/customComponents/gradients";
 import { TextSm, TextXl } from "../../assets/customComponents/textComponents";
-import { Image, ScrollView } from "react-native";
-import { borders } from "@/constants/borders";
 import { col } from "@/constants/Colors_Styles";
 import ImageIconCard from "@/assets/customComponents/imageIconCard";
+import { ScrollView } from "react-native";
 
-export default function DemoTwo() {
+export default function IconCards() {
   const iconImages = [
     {
       link: require("../../assets/images/example-icons/01.png"),
@@ -61,7 +60,7 @@ export default function DemoTwo() {
               color: col[200],
             }}
           >
-            Demo 2
+            Image Icon Cards
           </TextXl>
           <WrapFullWidth style={{ justifyContent: "space-evenly", gap: 15 }}>
             {iconImages.map((icon, index) => (

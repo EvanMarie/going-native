@@ -17,8 +17,8 @@ export default function TabLayout() {
         tabBarStyle: {
           ...Platform.select({
             ios: {
-              height: 55,
-              paddingBottom: 5,
+              height: 60,
+              paddingBottom: 13,
               backgroundColor: Colors[colorScheme ?? "light"].background,
             },
             android: {
@@ -45,10 +45,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="scrollExample"
         options={{
-          title: "Scroll",
+          title: "Scroll View",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
-              name={focused ? "link" : "link-outline"}
+              name={focused ? "list" : "list-outline"}
               color={color}
             />
           ),
@@ -57,22 +57,22 @@ export default function TabLayout() {
       <Tabs.Screen
         name="demoOne"
         options={{
-          title: "Parallax",
+          title: "Parallax & Collapsible",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
-              name={focused ? "link" : "link-outline"}
+              name={focused ? "cube" : "cube-outline"}
               color={color}
             />
           ),
         }}
       />
       <Tabs.Screen
-        name="demoTwo"
+        name="iconCards"
         options={{
-          title: "Icon Page",
+          title: "Icon Cards",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
-              name={focused ? "link" : "link-outline"}
+              name={focused ? "image" : "image-outline"}
               color={color}
             />
           ),

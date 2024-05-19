@@ -46,6 +46,7 @@ import { boxShadows, textShadows } from "@/constants/shadows";
 import { bordersB, borders, bordersT, radii } from "@/constants/borders";
 import CustomButton from "@/assets/customComponents/customButton";
 import { TextLineHeightsExample } from "@/assets/customComponents/designExamples/textLineHeights";
+import Divider from "@/assets/customComponents/divider";
 
 export default function DesignScreen() {
   const colorScheme = [
@@ -432,11 +433,16 @@ export default function DesignScreen() {
               Preset Design Components
             </HeadingLg>
           </CenterHorizontalFull>
+          <Divider />
           {/* ------------------------ COLOR SCHEME ------------------------ */}
           <VStackFullWidth
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
           >
             <HeaderSection title="Color Scheme" />
+            <TextSm>
+              The following color scheme colors are also available in varying
+              opacities, such as col[110], col[120], etc.{" "}
+            </TextSm>
             <WrapFullWidth
               style={{
                 alignItems: "center",
@@ -458,12 +464,14 @@ export default function DesignScreen() {
             </WrapFullWidth>
           </VStackFullWidth>
           {/* ------------------------ GRADIENTS ------------------------ */}
+          <Divider />
           <VStackFullWidth
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
           >
             <HeaderSection title="Color Scheme Gradients" />
             <GradientExamples />
           </VStackFullWidth>
+          <Divider />
           {/* ------------------------ TEXT SIZES ------------------------ */}
           <VStackFullWidth
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
@@ -491,6 +499,7 @@ export default function DesignScreen() {
               <Text9xl>Text9xl</Text9xl>
               <Text10xl>Text10xl</Text10xl>
             </WrapFullWidth>
+            <Divider />
             {/* ------------------------ TEXT LINE HEIGHTS ------------------------ */}
             <VStackFullWidth
               style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
@@ -503,6 +512,7 @@ export default function DesignScreen() {
               </TextSm>
               <TextLineHeightsExample />
             </VStackFullWidth>
+            <Divider />
             {/* ------------------------ HEADINGS ------------------------ */}
             <VStackFullWidth
               style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
@@ -532,6 +542,7 @@ export default function DesignScreen() {
               </WrapFullWidth>
             </VStackFullWidth>
           </VStackFullWidth>
+          <Divider />
           {/* ------------------------ FONT WEIGHTS ------------------------ */}
           <VStackFullWidth
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
@@ -571,6 +582,7 @@ export default function DesignScreen() {
               ))}
             </WrapFullWidth>
           </VStackFullWidth>
+          <Divider />
           {/* ------------------------ FONT WEIGHTS ------------------------ */}
           <VStackFullWidth
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
@@ -592,6 +604,7 @@ export default function DesignScreen() {
               ))}
             </WrapFullWidth>
           </VStackFullWidth>
+          <Divider />
           {/* ------------------------ BORDERS ------------------------ */}
           <VStackFullWidth
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
@@ -655,6 +668,7 @@ export default function DesignScreen() {
               ))}
             </WrapFullWidth>
           </VStackFullWidth>
+          <Divider />
         </ScrollView>
       </PaddedFullStack>
     </GradientSeven>

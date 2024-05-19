@@ -31,7 +31,7 @@ export default function TabLayout() {
         },
       }}
     >
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="index"
         options={{
           title: "Home",
@@ -42,7 +42,7 @@ export default function TabLayout() {
             />
           ),
         }}
-      />
+      /> */}
       <Tabs.Screen
         name="design"
         options={{
@@ -56,9 +56,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="tabOne"
+        name="scrollExample"
         options={{
-          title: "One",
+          title: "Scroll",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={focused ? "link" : "link-outline"}
@@ -68,9 +68,21 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="tabTwo"
+        name="demoOne"
         options={{
-          title: "Two",
+          title: "Demo 1",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? "link" : "link-outline"}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="demoTwo"
+        options={{
+          title: "Demo 2",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={focused ? "link" : "link-outline"}

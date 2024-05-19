@@ -189,7 +189,7 @@ export function Text3xl({
   return (
     <Text
       style={[
-        { fontSize: 37, lineHeight: 27, padding: 7, color: textColor },
+        { fontSize: 37, lineHeight: 37, padding: 7, color: textColor },
         style,
       ]}
     >

@@ -88,12 +88,10 @@ export default function DemoOne() {
         <Image source={require("../../assets/images/header.webp")} />
       }
       headerBackgroundColor={{ dark: col[800], light: col[200] }}
-      headerText="Demo One"
+      headerText="Parallax Header"
     >
       <GradientSix>
-        <VStackFullWidth
-          style={[bordersT.borderTxs800, { gap: 15, padding: 15 }]}
-        >
+        <VStackFullWidth style={[bordersT.borderTxs800]}>
           <CustomCollapsible title="Collapsible Container One">
             <TextSm>
               This is some content for the first collapsible container. It is

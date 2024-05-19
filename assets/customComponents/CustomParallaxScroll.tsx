@@ -25,8 +25,8 @@ export default function CustomParallaxScroll({
   headerImage,
   headerBackgroundColor,
   headerText,
-  headerTextColor = col[100],
-  headerOverlayColor = col[220],
+  headerTextColor = col["light"],
+  headerOverlayColor,
   headerHeight = 250,
 }: Props) {
   const HEADER_HEIGHT = headerHeight;
@@ -46,7 +46,7 @@ export default function CustomParallaxScroll({
       overflow: "hidden",
     },
   });
-  
+
   const headerAnimatedStyle = useAnimatedStyle(() => {
     return {
       transform: [

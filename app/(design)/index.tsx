@@ -391,6 +391,11 @@ export default function DesignScreen() {
     <GradientSeven>
       <PaddedFullStack>
         <ScrollView>
+          <CenterHorizontalFull>
+            <HeadingLg style={[{ textAlign: "center" }]}>
+              Preset Design Components
+            </HeadingLg>
+          </CenterHorizontalFull>
           {/* ------------------------ COLOR SCHEME ------------------------ */}
           <VStackFullWidth
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}

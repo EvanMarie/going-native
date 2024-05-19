@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View, StyleSheet, findNodeHandle } from "react-native";
 import VStackFullWidth, {
   CenterHorizontalFull,
   Flex,
@@ -46,14 +46,6 @@ import { bordersB, borders } from "@/constants/borders";
 import CustomButton from "@/assets/customComponents/customButton";
 
 export default function DesignScreen() {
-  const gradientsRef = useRef(null);
-  const textRef = useRef(null);
-  const shadowsRef = useRef(null);
-
-  const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   const fontWeights = [
     { style: fontStyles.regular, label: "fontStyles.regular" },
     { style: fontStyles.bold, label: "fontStyles.bold" },
@@ -327,46 +319,17 @@ export default function DesignScreen() {
 
   return (
     <GradientSeven>
-      <PaddedFullStack style={{ paddingTop: 80 }}>
-        <FlexFull
-          style={[
-            {
-              position: "absolute",
-              top: 0,
-              right: 0,
-              left: 0,
-              backgroundColor: col[800],
-              height: 80,
-              zIndex: 20,
-              flexDirection: "row",
-              justifyContent: "space-evenly",
-              alignItems: "flex-end",
-            },
-            bordersB.borderBxs400,
-          ]}
-        >
-          <CustomButton
-            text="Gradients"
-            scrollTo={() => scrollToSection(gradientsRef)}
-          />
-          <CustomButton text="Text" scrollTo={() => scrollToSection(textRef)} />
-          <CustomButton
-            text="Shadows"
-            scrollTo={() => scrollToSection(shadowsRef)}
-          />
-        </FlexFull>
+      <PaddedFullStack>
         <ScrollView>
           {/* ------------------------ GRADIENTS ------------------------ */}
           <VStackFullWidth
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
-            ref={gradientsRef}
           >
             <HeaderSection title="Color Scheme Gradients" />
             <GradientExamples />
           </VStackFullWidth>
           {/* ------------------------ TEXT SIZES ------------------------ */}
           <VStackFullWidth
-            ref={textRef}
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
           >
             <HeaderSection title="Preset Text & Heading Sizes" />
@@ -417,7 +380,6 @@ export default function DesignScreen() {
           </VStackFullWidth>
           {/* ------------------------ FONT WEIGHTS ------------------------ */}
           <VStackFullWidth
-            ref={shadowsRef}
             style={{ alignItems: "center", gap: 10, paddingVertical: 20 }}
           >
             <HeaderSection title="Font Weights & Styles" />

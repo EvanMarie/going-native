@@ -6,19 +6,27 @@ import Animated, {
   useAnimatedStyle,
   useScrollViewOffset,
 } from "react-native-reanimated";
-
-import { ThemedView } from "@/components/ThemedView";
+import { CustomComponentView } from "./customComponentView";
+import { TextXl, fontStyles } from "./textComponents";
+import { col } from "@/constants/Colors_Styles";
+import { textShadows } from "@/constants/shadows";
 
 type Props = PropsWithChildren<{
   headerImage: ReactElement;
   headerBackgroundColor: { dark: string; light: string };
   headerHeight?: number;
+  headerOverlayColor?: string;
+  headerText?: string;
+  headerTextColor?: string;
 }>;
 
 export default function CustomParallaxScroll({
   children,
   headerImage,
   headerBackgroundColor,
+  headerText,
+  headerTextColor = col[100],
+  headerOverlayColor = col[220],
   headerHeight = 250,
 }: Props) {
   const HEADER_HEIGHT = headerHeight;
@@ -35,10 +43,10 @@ export default function CustomParallaxScroll({
     },
     content: {
       flex: 1,
-      gap: 16,
       overflow: "hidden",
     },
   });
+  
   const headerAnimatedStyle = useAnimatedStyle(() => {
     return {
       transform: [
@@ -61,8 +69,28 @@ export default function CustomParallaxScroll({
   });
 
   return (
-    <ThemedView style={styles.container}>
+    <CustomComponentView style={styles.container}>
       <Animated.ScrollView ref={scrollRef} scrollEventThrottle={16}>
+        {headerText && (
+          <View
+            style={{
+              position: "absolute",
+              height: headerHeight,
+              width: "100%",
+              zIndex: 1,
+              top: 0,
+              display: "flex",
+              flex: 1,
+              backgroundColor: headerOverlayColor,
+              alignItems: "flex-start",
+              justifyContent: "flex-end",
+            }}
+          >
+            <TextXl style={[{ color: headerTextColor }, fontStyles.bold]}>
+              {headerText}
+            </TextXl>
+          </View>
+        )}
         <Animated.View
           style={[
             styles.header,
@@ -72,8 +100,10 @@ export default function CustomParallaxScroll({
         >
           {headerImage}
         </Animated.View>
-        <ThemedView style={styles.content}>{children}</ThemedView>
+        <CustomComponentView style={styles.content}>
+          {children}
+        </CustomComponentView>
       </Animated.ScrollView>
-    </ThemedView>
+    </CustomComponentView>
   );
 }
